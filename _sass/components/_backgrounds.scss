@@ -1,0 +1,42 @@
+// The glow sits behind a static, resolution-independent mathematical field.
+.atmospheric-glow {
+  position: fixed;
+  inset: -15%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.65;
+  background:
+    radial-gradient(
+      ellipse at 75% 15%,
+      color-mix(in srgb, var(--accent) 12%, transparent),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 10% 80%,
+      color-mix(in srgb, var(--accent) 7%, transparent),
+      transparent 45%
+    );
+  filter: blur(45px);
+  animation: atmosphere-drift var(--motion-ambient) ease-in-out infinite
+    alternate;
+}
+.mathematical-field {
+  position: fixed;
+  inset: -4%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: var(--field-opacity);
+  filter: blur(0.5px);
+  overflow: hidden;
+}
+.mathematical-field__pattern {
+  width: 100%;
+  height: 100%;
+  background: color-mix(in srgb, var(--accent) 55%, var(--text-secondary));
+  mask: var(--geometry-image) center / cover no-repeat;
+  -webkit-mask: var(--geometry-image) center / cover no-repeat;
+}
+:root[data-theme="light"] .mathematical-field {
+  opacity: var(--field-light-opacity);
+  filter: blur(0.25px);
+}

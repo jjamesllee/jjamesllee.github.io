@@ -1,0 +1,50 @@
+<script type="application/json" id="preference-config">
+    {{ site.data.preferences | jsonify }}
+</script>
+<script>
+    // Apply validated preferences before the stylesheet paints. The entry module
+    // uses this same configuration after the controls exist.
+    (() => {
+        const root = document.documentElement;
+        const config = JSON.parse(
+            document.getElementById("preference-config").textContent,
+        );
+        const saved = (key) => {
+            try {
+                return localStorage.getItem(key);
+            } catch {
+                return null;
+            }
+        };
+        const valid = (key, value) =>
+            config[key].includes(value) ? value : null;
+        const mode =
+            valid("modes", saved("portfolio-color-mode")) ||
+            config.defaults.mode;
+        root.classList.add("sidebar-ready");
+        root.classList.toggle(
+            "sidebar-collapsed",
+            matchMedia("(max-width: 60rem)").matches,
+        );
+        root.dataset.themePreference = mode;
+        root.dataset.theme =
+            mode === "system"
+                ? matchMedia("(prefers-color-scheme: dark)").matches
+                    ? "dark"
+                    : "light"
+                : mode;
+        root.dataset.accent =
+            valid("accents", saved("portfolio-accent")) ||
+            config.defaults.accent;
+        root.lang =
+            valid("languages", new URL(location.href).searchParams.get("lang")) ||
+            valid("languages", saved("portfolio-language")) ||
+            config.defaults.language;
+        root.dataset.language = root.lang;
+        if (root.lang === "zh-Hant") {
+            root.classList.add("locale-pending");
+            // The page remains readable even if a module fails to load.
+            setTimeout(() => root.classList.remove("locale-pending"), 1500);
+        }
+    })();
+</script>

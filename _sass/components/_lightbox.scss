@@ -1,0 +1,49 @@
+// Lightbox: current implementation.
+
+.lightbox {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: min(90vw, 70rem);
+  background: var(--surface);
+  color: var(--text-primary);
+}
+
+.lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.7333333333);
+}
+
+.lightbox img {
+  display: block;
+  clear: both;
+  max-width: 100%;
+  max-height: calc(75vh - 3rem);
+  margin: auto;
+}
+
+.lightbox button {
+  display: block;
+  margin: 0 0 1rem auto;
+  border: 0;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.lightbox[open] {
+  animation: panel-arrive var(--motion-panel) var(--ease-ui);
+}
+
+.lightbox > p {
+  display: block;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+.lightbox {
+  box-shadow: var(--panel-shadow);
+  background-color: var(--surface);
+}

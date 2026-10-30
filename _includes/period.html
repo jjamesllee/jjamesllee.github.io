@@ -1,0 +1,1 @@
+{% assign period_start = include.period.start | append: '-01' %}{{ period_start | date: '%b %Y' }} - {% if include.period.end %}{% assign period_end = include.period.end | append: '-01' %}{{ period_end | date: '%b %Y' }}{% else %}Present{% endif %}

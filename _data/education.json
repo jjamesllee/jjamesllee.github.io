@@ -1,0 +1,187 @@
+[
+  {
+    "id": "mechanical",
+    "institution": "University of Toronto",
+    "program": "Mechanical Engineering",
+    "period": "2026-2030 (expected)",
+    "status": "Current major",
+    "logo": "/assets/images/identity/university-of-toronto-crest-blue.svg",
+    "logo_style": "university",
+    "course_groups": [
+      {
+        "heading": "Major coursework",
+        "sections": [
+          {
+            "status": "Expected · Winter 2027",
+            "courses": [
+              {
+                "code": "MAT234",
+                "title": "Differential Equations"
+              },
+              {
+                "code": "MIE221",
+                "title": "Manufacturing Engineering"
+              },
+              {
+                "code": "MIE222",
+                "title": "Mechanics of Solids I"
+              },
+              {
+                "code": "MIE235",
+                "title": "Numerical Analysis and Computational Methods"
+              }
+            ]
+          },
+          {
+            "status": "Current · Fall 2026",
+            "courses": [
+              {
+                "code": "MIE210",
+                "title": "Thermodynamics"
+              },
+              {
+                "code": "MIE230",
+                "title": "Calculus III: Engineering Analysis"
+              },
+              {
+                "code": "MIE231",
+                "title": "Probability and Statistics with Engineering Applications"
+              },
+              {
+                "code": "MIE270",
+                "title": "Materials Science"
+              }
+            ]
+          },
+          {
+            "status": "Completed · Summer 2026",
+            "courses": [
+              {
+                "code": "MIE100",
+                "title": "Dynamics"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Engineering Business Minor",
+        "sections": [
+          {
+            "status": "Completed · Summer 2026",
+            "courses": [
+              {
+                "code": "JRE300",
+                "title": "Fundamentals of Accounting & Finance"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "heading": "Robotics & Mechatronics Minor",
+        "note": "MIE243 is also part of my Mechanical Engineering major.",
+        "sections": [
+          {
+            "status": "Current · Fall 2026",
+            "courses": [
+              {
+                "code": "MIE243",
+                "title": "Mechanical Engineering Design"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "materials",
+    "institution": "University of Toronto",
+    "program": "Materials Science and Engineering",
+    "period": "2025-2026",
+    "status": "Previous major",
+    "logo": "/assets/images/identity/university-of-toronto-crest-blue.svg",
+    "logo_style": "university",
+    "course_groups": [
+      {
+        "heading": "Major coursework",
+        "sections": [
+          {
+            "status": "Completed · 2025-2026",
+            "courses": [
+              {
+                "code": "APS110",
+                "title": "Engineering Chemistry and Materials Science"
+              },
+              {
+                "code": "APS111",
+                "title": "Engineering Strategies & Practice I"
+              },
+              {
+                "code": "CIV100",
+                "title": "Mechanics"
+              },
+              {
+                "code": "MAT186",
+                "title": "Calculus I"
+              },
+              {
+                "code": "MAT188",
+                "title": "Applied Linear Algebra"
+              },
+              {
+                "code": "APS106",
+                "title": "Fundamentals of Computer Programming"
+              },
+              {
+                "code": "APS112",
+                "title": "Engineering Strategies & Practice II"
+              },
+              {
+                "code": "ECE110",
+                "title": "Electrical Fundamentals"
+              },
+              {
+                "code": "MAT187",
+                "title": "Calculus II"
+              },
+              {
+                "code": "MSE120",
+                "title": "Materials Engineering, Processing and Application"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rgss",
+    "institution": "Richmond Green Secondary School",
+    "program": "High School",
+    "period": "2021-2025",
+    "logo": "/assets/images/experience/engineering-club.png",
+    "logo_style": "school",
+    "course_groups": [
+      {
+        "heading": "Relevant coursework",
+        "sections": [
+          {
+            "status": "Completed",
+            "courses": [
+              {
+                "code": "SBI4U",
+                "title": "Biology"
+              },
+              {
+                "code": "ENG4U",
+                "title": "English"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

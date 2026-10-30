@@ -1,0 +1,50 @@
+{
+  "golden": {
+    "name": "Golden spiral",
+    "asset": "/assets/images/backgrounds/golden.svg",
+    "dark_opacity": 0.12,
+    "light_opacity": 0.25,
+    "description": "A logarithmic spiral that grows by the golden ratio with every quarter turn.",
+    "wikipedia": "https://en.wikipedia.org/wiki/Golden_spiral"
+  },
+  "phyllotaxis": {
+    "name": "Phyllotaxis",
+    "asset": "/assets/images/backgrounds/phyllotaxis.svg",
+    "dark_opacity": 0.12,
+    "light_opacity": 0.25,
+    "description": "The arrangement of leaves around a plant stem. Spiral arrangements often follow the golden angle, creating patterns like those in sunflower seed heads.",
+    "wikipedia": "https://en.wikipedia.org/wiki/Phyllotaxis"
+  },
+  "lorenz": {
+    "name": "Lorenz attractor",
+    "asset": "/assets/images/backgrounds/lorenz.svg",
+    "dark_opacity": 0.055,
+    "light_opacity": 0.13,
+    "description": "A butterfly-shaped pattern traced by a chaotic system of three equations, originally developed to model atmospheric convection.",
+    "wikipedia": "https://en.wikipedia.org/wiki/Lorenz_system"
+  },
+  "sierpinski": {
+    "name": "Sierpiński triangle",
+    "asset": "/assets/images/backgrounds/sierpinski.svg",
+    "dark_opacity": 0.075,
+    "light_opacity": 0.24,
+    "description": "A fractal made by repeatedly removing the central triangle from an equilateral triangle, leaving smaller copies of the same shape.",
+    "wikipedia": "https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle"
+  },
+  "chladni": {
+    "name": "Chladni nodal patterns",
+    "asset": "/assets/images/backgrounds/chladni.svg",
+    "dark_opacity": 0.075,
+    "light_opacity": 0.25,
+    "description": "Patterns formed when particles collect along the still nodal lines of a vibrating surface, making sound vibrations visible.",
+    "wikipedia": "https://en.wikipedia.org/wiki/Ernst_Chladni#Chladni_figures"
+  },
+  "dragon": {
+    "name": "Dragon curve",
+    "asset": "/assets/images/backgrounds/dragon.svg",
+    "dark_opacity": 0.12,
+    "light_opacity": 0.25,
+    "description": "A fractal curve built by repeatedly folding a line through right angles, creating a pattern that repeats at smaller scales.",
+    "wikipedia": "https://en.wikipedia.org/wiki/Dragon_curve"
+  }
+}

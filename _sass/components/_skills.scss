@@ -1,0 +1,133 @@
+// Skills: current implementation.
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.project-tags span {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  border-color: var(--accent);
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  font-size: 0.8rem;
+}
+
+.project-card > .project-tags {
+  grid-column: 1;
+}
+
+.project-card > .project-tags {
+  margin: 0;
+  min-width: 0;
+}
+
+.project-groups.is-boxed .project-card .project-tags {
+  margin-top: auto;
+}
+
+#skills .section-title {
+  margin-bottom: 1.25rem;
+}
+
+#skills .section-title h2 {
+  font-size: clamp(2rem, 3vw, 2.75rem);
+}
+
+.skills-atlas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 2.5rem;
+}
+
+.skill-entry {
+  min-width: 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+  transition: border-color 200ms ease;
+}
+
+.skill-entry:hover {
+  border-color: var(--accent);
+}
+
+.skills-atlas h3 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  letter-spacing: -0.025em;
+}
+
+.skill-entry ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.skill-entry li {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  background: color-mix(in srgb, var(--surface) 75%, transparent);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease;
+}
+
+.skill-entry:hover li {
+  background: color-mix(in srgb, var(--accent) 5%, var(--surface));
+}
+
+.skill-entry--wide {
+  grid-column: 1/-1;
+}
+
+@media (max-width: 42rem) {
+  .skills-atlas {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 42rem) {
+  .skill-entry--wide {
+    grid-column: auto;
+  }
+}
+
+.project-tags > span {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.skills-atlas .skill-entry li {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.skills-atlas .skill-entry:hover li {
+  background: var(--accent-soft);
+}

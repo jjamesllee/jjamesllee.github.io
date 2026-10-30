@@ -1,2 +1,44 @@
-title: James' Portfolio Page
-description: Projects will be added here periodically!
+title: Cheng-Chi Lee
+description: Cheng-Chi Lee's engineering portfolio.
+url: https://jjamesllee.github.io
+baseurl: ""
+exclude:
+  # Development tooling and original source material (not runtime assets).
+  - scripts
+  - tests
+  - node_modules
+  - coverage
+  - source-assets
+  - .github
+  - .site-validation
+  - Gemfile
+  - Gemfile.lock
+  # Internal documentation. Keep project Markdown and image credits available.
+  - README.md
+  - AGENTS.md
+  - cleanup-audit.md
+  - launch-verification.md
+  - package.json
+  - package-lock.json
+
+# Keep public pages together while preserving clean URLs through each page's
+# explicit permalink.
+include:
+  - _pages
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: "_pages"
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      background: dragon

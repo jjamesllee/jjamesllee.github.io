@@ -1,0 +1,54 @@
+<section class="identity-hero" aria-labelledby="hello">
+  <h1 id="hello" class="identity-name" aria-label="Cheng-Chi Lee"><span>Cheng-Chi</span> <em class="name-history" tabindex="0" role="button" data-popover data-popover-trigger aria-expanded="false" aria-controls="lee-note" aria-describedby="lee-note">Lee<span class="name-history__tooltip" id="lee-note" role="tooltip">Careful, there are other Lees out there. Li, Le… I’m this one.</span></em></h1>
+  {% include education-note.html %}
+  <div class="hero-layout">
+    <div class="hero-note">
+      
+      {% include personal-intro.html %}
+      <a class="editorial-link" href="{{ '/about/' | relative_url }}">About me <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="hero-photos">
+      <figure class="hero-photo hero-photo--main"><div class="photo-placeholder" role="img" aria-label="Photo placeholder"></div><figcaption><span>I // Photo placeholder</span><span aria-hidden="true">↗</span></figcaption></figure>
+      <figure class="hero-photo hero-photo--inset"><div class="photo-placeholder" role="img" aria-label="Photo placeholder"></div><figcaption>II // Photo placeholder</figcaption></figure>
+    </div>
+  </div>
+  <div class="hero-divider" aria-hidden="true"></div>
+</section>
+<section class="editorial-section" id="right-now" aria-labelledby="right-now-heading">
+  <div class="editorial-section-heading"><h2 id="right-now-heading">What I’m up to right now<span class="accent-period">.</span></h2></div>
+  <div class="current-activities">
+    <article class="current-activity">
+      <h3>Iron Dragons</h3>
+      <ul><li>Dragon boat athlete</li><li>Following a tailored training plan</li><li>Aiming to compete in summer 2027</li></ul>
+    </article>
+    <article class="current-activity">
+      <h3>Blue Sky Solar Racing</h3>
+      <ul><li>Strategy team member</li><li>Leading the race plan library review</li><li>Reviewing past code and writing documentation</li></ul>
+    </article>
+    <article class="current-activity">
+      <h3>U of T Supermileage</h3>
+      <ul><li>Mechanical design team member</li><li>Measuring, dimensioning, and CAD modelling a new motor mount</li><li>Aiming for lower weight and easier repair access</li></ul>
+    </article>
+    <article class="current-activity">
+      <h3>MIE243 project</h3>
+      <ul><li>Technical lead</li><li>CAD modelling our differential and suspension parts</li><li>Building a teaching model for younger students</li></ul>
+    </article>
+  </div>
+</section>
+<section class="editorial-section" id="selected-work" aria-labelledby="work-heading">
+  <div class="editorial-section-heading"><div><p class="page-label">I // Recent projects</p><h2 id="work-heading">Most recent works<span class="accent-period">.</span></h2></div><a class="editorial-link" href="{{ '/projects/' | relative_url }}">All projects <span aria-hidden="true">↗</span></a></div>
+  {% assign selected_work = site.projects | sort: 'recent_order' %}
+  <div class="selected-gallery" tabindex="0" role="region" aria-label="Most recent works">
+    {% for project in selected_work limit:3 %}
+    <a class="gallery-work" href="{{ project.url | relative_url }}" aria-label="{{ project.title | escape }}">
+      <div class="gallery-work__image"><img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title | escape }}" loading="lazy" width="1000" height="800"><span class="gallery-work__open">{% include diagonal-arrow.html %}</span></div>
+      <div class="gallery-work__caption"><span class="page-label" aria-hidden="true">{% case forloop.index %}{% when 1 %}I{% when 2 %}II{% when 3 %}III{% endcase %}</span><h3>{{ project.gallery_title }}</h3></div>
+      <p>{{ project.gallery_summary }}</p>
+    </a>
+    {% endfor %}
+  </div>
+  <input class="gallery-progress" type="range" min="0" max="1000" value="0" step="1" aria-label="Scroll recent works">
+</section>
+<section class="editorial-section resume-section" id="resume" aria-labelledby="resume-heading"><div class="editorial-section-heading"><div><p class="page-label">II // Resume</p><h2 id="resume-heading">Resume<span class="accent-period">.</span></h2></div></div>{% include resume-card.html %}</section>
+<section class="editorial-outro" aria-labelledby="home-outro"><p class="page-label">III // Let’s connect</p><h2 id="home-outro">Let’s work<br><em>together.</em></h2><a class="round-link" href="{{ '/contact/' | relative_url }}" aria-label="Get in touch">{% include diagonal-arrow.html %}</a></section>
+

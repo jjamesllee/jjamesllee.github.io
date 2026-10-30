@@ -1,0 +1,14 @@
+{% if include.months %}
+  <details class="timeline-mini" open aria-label="{{ include.year }} month timeline">
+    <summary class="timeline-mini__label">{{ include.year }} · Month timeline</summary>
+    <ol>
+      {% for month in include.months %}
+        <li>
+          <span>{{ month.date }}</span>
+          <a href="#timeline-detail" data-month-jump="timeline-detail-{{ month.id }}">{{ month.title }}</a>
+          <small>{{ month.summary }}</small>
+        </li>
+      {% endfor %}
+    </ol>
+  </details>
+{% endif %}

@@ -1,0 +1,11 @@
+{% assign image_side = include.side | default: "right" %}
+<section class="project-media-row project-media-row--image-{{ image_side }}">
+    <div class="project-media-row__text">
+        {% if include.heading %}
+        <h2>{{ include.heading }}</h2>
+        {% endif %} {{ include.content | markdownify }}
+    </div>
+
+    {% include project-page-sections/figure.html image=include.image
+    alt=include.alt caption=include.caption %}
+</section>

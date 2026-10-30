@@ -1,0 +1,123 @@
+<div class="appearance-controls">
+    <div class="theme-picker" data-theme-picker>
+        <button
+            class="header-tool theme-picker__trigger"
+            type="button"
+            data-theme-trigger
+            aria-haspopup="menu"
+            aria-controls="theme-menu"
+            aria-expanded="false"
+            aria-label="Appearance: System"
+            title="Appearance"
+        >
+            <span data-theme-icon="light"
+                >{% include ui-icon.html name="sun" %}</span
+            >
+            <span data-theme-icon="dark"
+                >{% include ui-icon.html name="moon" %}</span
+            >
+            <span data-theme-icon="system"
+                >{% include ui-icon.html name="monitor" %}</span
+            >
+        </button>
+        <div
+            class="theme-picker__menu"
+            id="theme-menu"
+            role="menu"
+            aria-label="Appearance"
+            hidden
+        >
+            <p>Appearance</p>
+            <button
+                type="button"
+                role="menuitemradio"
+                data-theme-option="light"
+                aria-checked="false"
+            >
+                {% include ui-icon.html name="sun" %}<span>Light</span
+                ><span class="theme-picker__check"
+                    >{% include ui-icon.html name="check" %}</span
+                >
+            </button>
+            <button
+                type="button"
+                role="menuitemradio"
+                data-theme-option="dark"
+                aria-checked="false"
+            >
+                {% include ui-icon.html name="moon" %}<span>Dark</span
+                ><span class="theme-picker__check"
+                    >{% include ui-icon.html name="check" %}</span
+                >
+            </button>
+            <button
+                type="button"
+                role="menuitemradio"
+                data-theme-option="system"
+                aria-checked="true"
+            >
+                {% include ui-icon.html name="monitor" %}<span>System</span
+                ><span class="theme-picker__check"
+                    >{% include ui-icon.html name="check" %}</span
+                >
+            </button>
+        </div>
+    </div>
+    <div class="accent-picker" data-accent-picker>
+        <button
+            class="accent-picker__trigger header-tool"
+            type="button"
+            data-accent-trigger
+            aria-label="Choose accent colour"
+            aria-controls="accent-menu"
+            aria-expanded="false"
+            title="Accent colour"
+        >
+            <span aria-hidden="true"></span>
+        </button>
+        <div
+            class="accent-picker__menu"
+            id="accent-menu"
+            data-accent-menu
+            role="group"
+            aria-label="Accent colour"
+        >
+            <button
+                type="button"
+                data-accent-option="rose"
+                aria-label="Rose accent"
+                title="Rose"
+            ></button>
+            <button
+                type="button"
+                data-accent-option="apricot"
+                aria-label="Apricot accent"
+                title="Apricot"
+            ></button>
+            <button
+                type="button"
+                data-accent-option="honey"
+                aria-label="Honey accent"
+                title="Honey"
+            ></button>
+            <button
+                type="button"
+                data-accent-option="sage"
+                aria-label="Sage accent"
+                title="Sage"
+            ></button>
+            <button
+                type="button"
+                data-accent-option="sky"
+                aria-label="Sky accent"
+                title="Sky"
+            ></button>
+            <button
+                type="button"
+                data-accent-option="lavender"
+                aria-label="Lavender accent"
+                title="Lavender"
+            ></button>
+        </div>
+    </div>
+</div>

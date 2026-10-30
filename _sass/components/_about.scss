@@ -1,0 +1,164 @@
+// About: current implementation.
+
+.about-editorial__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.about-editorial__heading h1 {
+  font-size: clamp(3.25rem, 7vw, 7rem);
+  line-height: 1.06;
+}
+
+.about-essay {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.65fr);
+  grid-template-rows: 1fr auto;
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.about-essay__rail {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: stretch;
+  min-width: 0;
+}
+
+.about-essay__profile {
+  position: sticky;
+  top: 7rem;
+  min-width: 0;
+}
+
+.editorial-page .about-essay__photo { margin: 0 0 2rem; }
+
+.editorial-page .about-essay__photo figcaption { margin-top: 1rem; }
+.about-essay__profile .engineering-badge { margin: 0; row-gap: 0.75rem; }
+.about-essay__profile .minor-links { margin-top: 0.5rem; row-gap: 0.75rem; }
+
+.editorial-page--about .about-essay__photo .photo-placeholder { aspect-ratio: 1; }
+
+.about-essay__photo img {
+  aspect-ratio: 1.3;
+  height: auto;
+  filter: saturate(0.65);
+  border-radius: 0.25rem;
+}
+
+.about-bio h2 {
+  margin: 0 0 1.5rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 60rem) {
+  .about-essay {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 55rem) {
+  .about-essay__profile { position: static; }
+  .about-essay__photo { max-width: 24rem; }
+  .about-essay {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 42rem) {
+  .about-editorial__heading {
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 42rem) {
+  .about-editorial__heading h1 {
+    font-size: clamp(2.7rem, 10vw, 4rem);
+  }
+}
+
+@media (max-width: 42rem) {
+  .about-essay__photo img {
+    aspect-ratio: 1.1;
+  }
+}
+
+.about-essay .education-note {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.about-essay .minor-links {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.about-editorial__heading {
+  margin: 1rem 0 2rem;
+}
+
+
+.design-notes { border-top: 1px solid var(--border); padding-top: var(--section-space); }
+.design-notes p { font-size: 1.05rem; line-height: 1.75; margin: 1.25rem 0 0; }
+
+// Compact, full-width guide; keep five cards together on smaller screens.
+.tree-guide { margin-top: 1.25rem; width: 100%; border: 1px solid var(--border); border-radius: 0.5rem; background: var(--surface); }
+.tree-guide > summary { padding: 0.75rem 1rem; cursor: pointer; color: var(--accent-strong); font-size: 0.85rem; font-weight: 600; }
+.tree-guide > summary::marker { color: var(--accent-strong); }
+.tree-guide > summary:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 3px; }
+.tree-guide__body { padding: 0 1rem 0.75rem; }
+.design-notes .tree-guide__note { margin: 0 0 0.75rem; font-size: 0.72rem; line-height: 1.5; color: var(--text-secondary); }
+.tree-guide__list { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; padding: 0; margin: 0; list-style: none; }
+.tree-guide__list > li { min-width: 0; border-top: 1px solid var(--border); padding-top: 0.5rem; }
+.tree-guide__visual { height: 3.5rem; margin-bottom: 0.5rem; color: var(--accent-strong); }
+.tree-guide__visual .garden-tree-image { width: 100%; height: 100%; }
+.tree-guide__heading h3 { font-size: 0.85rem; letter-spacing: normal; }
+.tree-guide__heading > span { font-size: 0.65rem; color: var(--text-secondary); }
+.design-notes .tree-guide__list p { margin: 0.35rem 0; font-size: 0.72rem; line-height: 1.5; color: var(--text-secondary); }
+.tree-guide__list a, .tree-guide__credits a { color: var(--accent-strong); font-size: 0.68rem; text-underline-offset: 0.2em; }
+.design-notes .tree-guide__credits { margin: 0.75rem 0 0; padding-top: 0.5rem; border-top: 1px solid var(--border); font-size: 0.65rem; line-height: 1.5; color: var(--text-secondary); }
+@media (max-width: 55rem) {
+  .tree-guide__list { grid-template-columns: repeat(5, minmax(8.5rem, 1fr)); overflow-x: auto; padding-bottom: 0.75rem; overscroll-behavior-x: contain; }
+}
+
+.education-section { border-top: 1px solid var(--border); padding-top: var(--section-space); }
+.education-list { display: grid; }
+.education-entry { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: 1.25rem; padding: 1.25rem 0; border-top: 1px solid var(--border); }
+.education-entry:first-child { padding-top: 0; border-top: 0; }
+.education-entry__logo { display: grid; place-items: center; width: 3.5rem; height: 3.5rem; border-radius: 0.35rem; overflow: hidden; }
+.education-entry__logo--school { background: white; }
+.education-entry__logo--university { background: none; border-radius: 0; overflow: visible; }
+.editorial-page .education-entry__logo img { width: 100%; height: 100%; min-width: 0; min-height: 0; object-fit: contain; }
+.editorial-page .education-entry__logo--university img { width: auto; height: 3.5rem; max-width: 100%; object-fit: contain; padding: 0; }
+:root[data-theme="dark"] .education-entry__logo--university img { filter: brightness(2.25) saturate(0.85); }
+.education-entry__heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.35rem 1rem; }
+.education-entry__heading h3 { font-size: clamp(1.05rem, 2vw, 1.4rem); letter-spacing: -0.025em; }
+.education-entry .education-entry__period { margin: 0; font-size: 0.75rem; color: var(--text-secondary); }
+.education-entry .education-entry__institution { margin: 0.3rem 0 0.7rem; font-size: 0.85rem; color: var(--text-secondary); }
+.education-entry__status { margin-inline-start: 0.5rem; font-size: 0.7rem; color: var(--accent-strong); }
+.education-entry .education-entry__course-label { margin: 0 0 0.35rem; font-size: 0.7rem; font-weight: 600; color: var(--text-secondary); }
+.education-entry__courses { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; padding: 0; margin: 0; list-style: none; font-size: 0.8rem; line-height: 1.5; color: var(--text-secondary); }
+.education-entry__courses li::before { content: ""; display: inline-block; width: 0.25rem; height: 0.25rem; margin-inline-end: 0.4rem; border-radius: 50%; background: var(--accent-strong); vertical-align: middle; }
+@media (max-width: 42rem) { .education-entry { grid-template-columns: 2.75rem minmax(0, 1fr); gap: 0.75rem; } .education-entry__logo { width: 2.75rem; height: 2.75rem; } .editorial-page .education-entry__logo--university img { height: 2.75rem; } }
+
+.education-entry__course-groups { display: grid; gap: 0.8rem; }
+.education-course-group h4 { margin: 0 0 0.3rem; font-size: 0.8rem; font-weight: 600; color: var(--text-primary); }
+.education-course-term + .education-course-term { margin-top: 0.55rem; }
+.education-entry .education-course-term__status { margin: 0 0 0.2rem; font-size: 0.68rem; font-weight: 500; color: var(--accent-strong); }
+.education-entry .education-course-group__note { margin: 0 0 0.3rem; font-size: 0.7rem; line-height: 1.5; color: var(--text-secondary); }
+.education-course-code { font-size: 0.7rem; color: var(--text-secondary); }
+
+.about-bio { grid-column: 2; grid-row: 1 / 3; min-width: 0; }
+.about-bio > p { margin: 0 0 1.25rem; font-size: 1rem; line-height: 1.75; }
+.about-bio > p:last-of-type { margin-bottom: 0; }
+.about-experiences { grid-column: 1; grid-row: 2; align-self: end; display: flex; width: min(100%, 13rem); margin: 0; padding-block: 1rem; }
+
+@media (max-width: 55rem) {
+  .about-essay { grid-template-rows: auto; }
+  .about-bio, .about-experiences { grid-column: 1; grid-row: auto; }
+}

@@ -1,0 +1,15 @@
+<aside class="social-sidebar" aria-label="Page contents">
+  <button class="sidebar-toggle" type="button" data-sidebar-toggle aria-expanded="true" aria-controls="sidebar-content" aria-label="Collapse table of contents" title="Collapse table of contents">
+    <span class="sidebar-toggle__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></span>
+    <span class="sidebar-toggle__label">Table of contents</span>
+  </button>
+  <div class="sidebar-content" id="sidebar-content">
+    <nav class="sidebar-index" id="page-index" aria-label="On this page">
+      <div data-section-index></div>
+    </nav>
+    <a class="sidebar-projects" href="{{ '/projects/' | relative_url }}">All projects <span aria-hidden="true">↗</span></a>
+    <div class="sidebar-mobile-socials">
+      {% for social in site.data.social_links %}<a class="social-link header-tool" href="{{ social.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ social.label }} (opens in a new tab)" title="{{ social.label }}"><span class="social-link__icon social-link__icon--{{ social.label | downcase }}" aria-hidden="true"></span></a>{% endfor %}
+    </div>
+  </div>
+</aside>

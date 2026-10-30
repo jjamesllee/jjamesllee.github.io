@@ -1,0 +1,694 @@
+[
+  {
+    "id": "utsm",
+    "name": "University of Toronto Supermileage",
+    "location": "Toronto, Ontario",
+    "period": {
+      "start": "2026-09",
+      "end": null
+    },
+    "url": "https://www.utsm.ca/",
+    "roles": [
+      {
+        "title": "Prototype Vehicle Team Mechanical Member",
+        "date": {
+          "start": "2026-09",
+          "end": null
+        },
+        "bullets": [
+          [
+            {
+              "text": "Designing and developing the prototype vehicle’s ",
+              "strong": false
+            },
+            {
+              "text": "rear shelf assembly",
+              "strong": true
+            },
+            {
+              "text": " to accommodate the motor, battery, and drivetrain mounting systems within the available vehicle space.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Redesigning mounting concepts in ",
+              "strong": false
+            },
+            {
+              "text": "SOLIDWORKS",
+              "strong": true
+            },
+            {
+              "text": ", working through component integration, structural support, and sizing constraints as part of the rear assembly’s mechanical development.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Developing and iterating CAD models, then using ",
+              "strong": false
+            },
+            {
+              "text": "rapid prototypes",
+              "strong": true
+            },
+            {
+              "text": " to evaluate concepts, examine mechanical functionality, and inform the next design revision.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Collaborating with mechanical teammates",
+              "strong": true
+            },
+            {
+              "text": " to work through technical challenges, refine mounting concepts, and align individual components with the evolving vehicle design.",
+              "strong": false
+            }
+          ]
+        ],
+        "technical": [
+          "SOLIDWORKS",
+          "CAD modelling & design",
+          "Mechanical design",
+          "Assembly modelling",
+          "Prototyping"
+        ],
+        "interpersonal": [
+          "Teamwork",
+          "Problem solving",
+          "Communication",
+          "Adaptability",
+          "Technical collaboration",
+          "Design communication"
+        ]
+      }
+    ],
+    "logo": "utsm.png",
+    "logo_style": "dark"
+  },
+  {
+    "id": "blue-sky",
+    "name": "Blue Sky Solar Racing",
+    "location": "Toronto, Ontario",
+    "period": {
+      "start": "2026-09",
+      "end": null
+    },
+    "url": "https://www.blueskysolar.org/",
+    "roles": [
+      {
+        "title": "Strategy Team Member",
+        "date": {
+          "start": "2026-09",
+          "end": null
+        },
+        "bullets": [
+          [
+            {
+              "text": "Contributing to the ",
+              "strong": false
+            },
+            {
+              "text": "C++ strategy software",
+              "strong": true
+            },
+            {
+              "text": " codebase for Sapphire, the team’s Generation 13 solar-powered vehicle, with a focus on race planning and energy management.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Reviewing and analyzing the existing ",
+              "strong": false
+            },
+            {
+              "text": "race-planning library",
+              "strong": true
+            },
+            {
+              "text": " to understand its functionality, evaluate how the software supports strategy decisions, and identify potential improvements for future development.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Collaborating with the Strategy Team",
+              "strong": true
+            },
+            {
+              "text": " on software solutions that connect race planning, energy management, and vehicle performance optimization.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Supporting the transition to a redesigned strategy codebase through ",
+              "strong": false
+            },
+            {
+              "text": "code review",
+              "strong": true
+            },
+            {
+              "text": ", analytical problem-solving, and independent learning to understand the new software structure.",
+              "strong": false
+            }
+          ]
+        ],
+        "technical": [
+          "C++",
+          "Software development",
+          "Code review"
+        ],
+        "interpersonal": [
+          "Analytical thinking",
+          "Teamwork",
+          "Problem solving",
+          "Independent learning",
+          "Technical collaboration",
+          "Adaptability"
+        ]
+      }
+    ],
+    "logo": "blue-sky.png",
+    "logo_style": "light"
+  },
+  {
+    "id": "swimming",
+    "name": "Private Swimming Instructor",
+    "location": "Richmond Hill, Ontario",
+    "period": {
+      "start": "2024-01",
+      "end": "2026-09"
+    },
+    "url": "",
+    "roles": [
+      {
+        "title": "Private Swimming Instructor · Self-employed",
+        "date": {
+          "start": "2024-01",
+          "end": "2026-09"
+        },
+        "bullets": [
+          [
+            {
+              "text": "Built and operated an independent swimming-instruction service, acquiring ",
+              "strong": false
+            },
+            {
+              "text": "7 clients",
+              "strong": true
+            },
+            {
+              "text": " through direct outreach and referrals and managing the full process from initial enquiries to lesson scheduling and payment.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Delivered ",
+              "strong": false
+            },
+            {
+              "text": "100+ personalized private lessons",
+              "strong": true
+            },
+            {
+              "text": " for children from kindergarten through Grade 8, adapting activities and coaching to each student’s experience, confidence, and learning needs.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Developed individualized lesson plans and provided hands-on demonstrations and feedback, helping beginners progress from fear of the water to ",
+              "strong": false
+            },
+            {
+              "text": "independently swimming laps",
+              "strong": true
+            },
+            {
+              "text": ".",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Organized pricing, invoicing, payment tracking, pool reservations, and lesson schedules using ",
+              "strong": false
+            },
+            {
+              "text": "Google Sheets",
+              "strong": true
+            },
+            {
+              "text": " while maintaining clear communication with parents about arrangements and student progress.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Generated ",
+              "strong": false
+            },
+            {
+              "text": "over $5,000 in revenue",
+              "strong": true
+            },
+            {
+              "text": " and earned 3 new clients through referrals by maintaining strong relationships with students and parents.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Maintained a record of ",
+              "strong": false
+            },
+            {
+              "text": "zero safety incidents",
+              "strong": true
+            },
+            {
+              "text": " while providing one-to-one instruction for students with different swimming abilities and levels of water confidence.",
+              "strong": false
+            }
+          ]
+        ],
+        "technical": [
+          "Swimming instruction",
+          "Lesson planning",
+          "Water safety",
+          "Google Sheets",
+          "Scheduling"
+        ],
+        "interpersonal": [
+          "Coaching",
+          "Client communication",
+          "Patience",
+          "Organization",
+          "Responsibility",
+          "Adaptable instruction",
+          "Relationship building",
+          "Entrepreneurship",
+          "Parent communication",
+          "Customer service",
+          "Demonstration and feedback"
+        ]
+      }
+    ],
+    "logo": "swimming.svg",
+    "logo_style": "plain"
+  },
+  {
+    "id": "engineering-club",
+    "name": "Richmond Green Secondary School",
+    "location": "Richmond Hill, Ontario",
+    "period": {
+      "start": "2024-09",
+      "end": "2025-06"
+    },
+    "url": "https://richmondgreen-ss.yrdsb.ca/",
+    "roles": [
+      {
+        "title": "Engineering Club Co-Founder & Vice President",
+        "date": {
+          "start": "2024-09",
+          "end": "2025-06"
+        },
+        "bullets": [
+          [
+            {
+              "text": "Co-founded and helped operate a student-led engineering club with ",
+              "strong": false
+            },
+            {
+              "text": "30+ members",
+              "strong": true
+            },
+            {
+              "text": ", taking responsibility for event planning, practical logistics, and day-to-day club coordination.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Coordinated ",
+              "strong": false
+            },
+            {
+              "text": "hands-on STEM activities",
+              "strong": true
+            },
+            {
+              "text": " that gave students opportunities to explore engineering ideas through physical design challenges and practical experimentation.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Organized a popsicle-stick ",
+              "strong": false
+            },
+            {
+              "text": "bridge design and load-testing challenge",
+              "strong": true
+            },
+            {
+              "text": ", introducing civil engineering principles through building and testing model structures.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Collaborated with the Chemistry Club to organize a ",
+              "strong": false
+            },
+            {
+              "text": "saponification workshop",
+              "strong": true
+            },
+            {
+              "text": ", connecting applied chemistry with hands-on soap-making and expanding the club’s cross-disciplinary activities.",
+              "strong": false
+            }
+          ]
+        ],
+        "technical": [
+          "Prototyping",
+          "Load testing",
+          "Workshop coordination"
+        ],
+        "interpersonal": [
+          "Leadership",
+          "Event planning",
+          "Organization",
+          "Teamwork",
+          "Communication",
+          "Initiative",
+          "Cross-club collaboration",
+          "Team coordination",
+          "Activity facilitation",
+          "STEM communication"
+        ]
+      }
+    ],
+    "logo": "engineering-club.png",
+    "logo_style": "light"
+  },
+  {
+    "id": "air-cadets",
+    "name": "Royal Canadian Air Cadets",
+    "location": "Ontario, Canada",
+    "period": {
+      "start": "2022-09",
+      "end": "2025-06"
+    },
+    "url": "https://www.canada.ca/en/department-national-defence/services/cadets-junior-canadian-rangers/cadets.html",
+    "roles": [
+      {
+        "title": "Band Second-in-Command",
+        "date": {
+          "start": "2024-09",
+          "end": "2025-06"
+        },
+        "bullets": [
+          [
+            {
+              "text": "Co-led a marching band of ",
+              "strong": false
+            },
+            {
+              "text": "30+ cadets",
+              "strong": true
+            },
+            {
+              "text": ", coordinating rehearsals, sectionals, schedules, and equipment.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Mentored junior cadets, led practices, and ",
+              "strong": false
+            },
+            {
+              "text": "assumed command",
+              "strong": true
+            },
+            {
+              "text": " in the Band Commander’s absence.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Contributed to multiple ",
+              "strong": false
+            },
+            {
+              "text": "1st-, 2nd-, and 3rd-place",
+              "strong": true
+            },
+            {
+              "text": " regional competition finishes through coordinated preparation and teamwork.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Maintained ",
+              "strong": false
+            },
+            {
+              "text": "attendance records and rehearsal schedules",
+              "strong": true
+            },
+            {
+              "text": ", and coordinated equipment alongside senior leadership to keep practices organized.",
+              "strong": false
+            }
+          ]
+        ],
+        "technical": [
+          "Training delivery",
+          "Scheduling",
+          "Equipment coordination"
+        ],
+        "interpersonal": [
+          "Leadership",
+          "Mentoring",
+          "Communication",
+          "Organization",
+          "Teaching",
+          "Delegation",
+          "Practice facilitation"
+        ]
+      },
+      {
+        "title": "Marksmanship Team Captain",
+        "date": {
+          "start": "2023-12",
+          "end": "2025-06"
+        },
+        "bullets": [
+          [
+            {
+              "text": "Captained a five-member team over two years, coordinating ",
+              "strong": false
+            },
+            {
+              "text": "9-12 hours of weekly training",
+              "strong": true
+            },
+            {
+              "text": " and competition preparation.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Evaluated performance and developed targeted individual training to address weaknesses and improve ",
+              "strong": false
+            },
+            {
+              "text": "shooting consistency",
+              "strong": true
+            },
+            {
+              "text": ".",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Led the team to ",
+              "strong": false
+            },
+            {
+              "text": "4th place",
+              "strong": true
+            },
+            {
+              "text": " at the 2024 Ontario Provincial Marksmanship Competition; earned individual 2nd-place finishes at provincials in 2024 and regionals in 2025.",
+              "strong": false
+            }
+          ]
+        ],
+        "technical": [
+          "Training planning",
+          "Skill assessment"
+        ],
+        "interpersonal": [
+          "Goal setting",
+          "Time management",
+          "Motivation",
+          "Individual development planning"
+        ]
+      },
+      {
+        "title": "Marksmanship Instructor & Coach",
+        "date": {
+          "start": "2023-12",
+          "end": "2025-06"
+        },
+        "bullets": [
+          [
+            {
+              "text": "Coached ",
+              "strong": false
+            },
+            {
+              "text": "50+ cadets",
+              "strong": true
+            },
+            {
+              "text": " through one-on-one range instruction in marksmanship fundamentals, shooting technique, and range safety.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Used hands-on demonstrations and ",
+              "strong": false
+            },
+            {
+              "text": "personalized feedback",
+              "strong": true
+            },
+            {
+              "text": " to build accuracy, confidence, and proper technique.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Supported competitive team members with ongoing mentorship and technical guidance.",
+              "strong": false
+            }
+          ]
+        ],
+        "technical": [
+          "Training delivery",
+          "Skill assessment",
+          "Range safety"
+        ],
+        "interpersonal": [
+          "Coaching",
+          "Constructive feedback",
+          "Confidence building"
+        ]
+      },
+      {
+        "title": "Competitive Biathlete",
+        "date": {
+          "start": "2023-09",
+          "end": "2025-06"
+        },
+        "bullets": [
+          [
+            {
+              "text": "Competed in regional cadet biathlon events, combining ",
+              "strong": false
+            },
+            {
+              "text": "endurance racing with marksmanship",
+              "strong": true
+            },
+            {
+              "text": ".",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Trained weekly in physical conditioning, shooting accuracy, and competition performance.",
+              "strong": false
+            }
+          ]
+        ],
+        "technical": [],
+        "interpersonal": [
+          "Discipline",
+          "Resilience",
+          "Teamwork",
+          "Composure under pressure"
+        ]
+      },
+      {
+        "title": "Air Cadet",
+        "date": {
+          "start": "2022-09",
+          "end": "2025-06"
+        },
+        "bullets": [
+          [
+            {
+              "text": "Prepared and delivered lessons",
+              "strong": true
+            },
+            {
+              "text": " for Level 2 and 3 cadets on leadership, teamwork, aviation, and cadet training.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Helped organize squadron events, movie nights, tagging fundraisers, and community activities.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Participated in ",
+              "strong": false
+            },
+            {
+              "text": "field training exercises",
+              "strong": true
+            },
+            {
+              "text": ", drill, ceremonial parades, and regular squadron training.",
+              "strong": false
+            }
+          ]
+        ],
+        "technical": [
+          "Lesson planning",
+          "Training delivery",
+          "Event coordination"
+        ],
+        "interpersonal": [
+          "Public speaking",
+          "Community engagement"
+        ]
+      }
+    ],
+    "logo": "air-cadets.svg",
+    "logo_style": "plain"
+  }
+]

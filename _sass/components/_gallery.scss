@@ -1,0 +1,49 @@
+// Gallery: current implementation.
+
+.flex-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1rem;
+}
+
+.flex-gallery figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.flex-gallery img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.gallery-open {
+  border: 0;
+  padding: 0;
+  background: none;
+  width: 100%;
+  cursor: zoom-in;
+}
+
+.page-shell > .personal-gallery {
+  background: var(--surface);
+  box-shadow: var(--panel-shadow);
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.personal-gallery figure {
+  filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.062745098));
+}
+
+@media (max-width: 30rem) {
+  .page-shell > .personal-gallery {
+    padding: 1.1rem;
+  }
+}
+
+.page-shell > .personal-gallery {
+  margin-block: 0 var(--section-space);
+}

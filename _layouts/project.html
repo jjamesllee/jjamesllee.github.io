@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<article class="project-detail{% if page.project_class %} {{ page.project_class | escape }}{% endif %}">
+  <a class="project-detail__back" href="{{ '/projects/' | relative_url }}">Back to projects</a>
+
+  {% if page.cover %}
+  <div class="{{ page.cover.layout_class | default: 'project-cover-layout' | escape }}">
+    <figure class="{{ page.cover.class | default: 'project-cover-photo' | escape }}">
+      {% if page.cover.label %}<span class="{{ page.cover.label_class | default: 'page-label' | escape }}">{{ page.cover.label }}</span>{% endif %}
+      <button class="gallery-open" type="button" data-lightbox="{{ page.cover.image | relative_url }}" data-caption="{{ page.cover.lightbox_caption | default: page.cover.caption | escape }}"><img src="{{ page.cover.image | relative_url }}" alt="{{ page.cover.alt | escape }}" loading="eager" fetchpriority="high"></button>
+      {% if page.cover.caption %}<figcaption>{{ page.cover.caption }}</figcaption>{% endif %}
+    </figure>
+  {% endif %}
+  <header class="project-detail__header">
+    {% include section-title.html level="h1" title=page.title label=page.course id="project-heading" %}
+    {% if page.summary %}
+      <p class="project-detail__summary">{{ page.summary }}</p>
+    {% endif %}
+
+    <dl class="project-meta">
+      {% if page.metadata %}
+        {% for item in page.metadata %}<div><dt>{{ item.label }}</dt><dd>{{ item.value | default: page[item.field] }}</dd></div>{% endfor %}
+      {% else %}
+      {% if page.year %}
+        <div>
+          <dt>Year</dt>
+          <dd>{{ page.year }}</dd>
+        </div>
+      {% endif %}
+      {% if page.client %}
+        <div>
+          <dt>Client</dt>
+          <dd>{{ page.client }}</dd>
+        </div>
+      {% endif %}
+      {% if page.role %}
+        <div>
+          <dt>Role</dt>
+          <dd>{{ page.role }}</dd>
+        </div>
+      {% endif %}
+      {% if page.github %}
+        <div>
+          <dt>GitHub</dt>
+          <dd>
+            <a href="{{ page.github }}" target="_blank" rel="noopener noreferrer">
+              View repository
+            </a>
+          </dd>
+        </div>
+      {% endif %}
+      {% endif %}
+    </dl>
+
+    {% if page.skill_tags %}
+      <div class="project-tags" aria-label="Project skills">{% for slug in page.tags %}{% assign tag = site.data.project_tags | where: 'slug', slug | first %}<span>{{ tag.label | default: slug }}</span>{% endfor %}</div>
+    {% elsif page.technologies %}
+      <div class="project-tags" aria-label="Tools and hardware">
+        {% for technology in page.technologies %}
+          <span>{{ technology }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if page.actions %}
+      <div class="section-actions">{% for action in page.actions %}<a class="action-link" href="{{ action.url }}">{{ action.label }}</a>{% endfor %}</div>
+    {% endif %}
+  </header>
+  {% if page.cover %}</div>{% endif %}
+
+  {% if page.hero %}
+    {% include project-page-sections/figure.html
+      image=page.hero.image
+      alt=page.hero.alt
+      caption=page.hero.caption
+      eager=true
+      class="project-hero"
+    %}
+  {% endif %}
+
+  {% if page.content_wrapper == false %}
+    {{ content }}
+  {% else %}
+    <div class="project-detail__content">{{ content }}</div>
+  {% endif %}
+  {% if page.gallery and page.gallery.size > 0 %}
+  <section class="template-section" id="project-gallery">
+    {% include section-title.html title="Gallery" label="From the workbench" %}
+    {% include gallery.html images=page.gallery %}
+  </section>
+  {% endif %}
+</article>

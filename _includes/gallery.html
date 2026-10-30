@@ -1,0 +1,35 @@
+<div
+    class="flex-gallery"
+    aria-label="{{ include.label | default: 'Image gallery' }}"
+>
+    {% for item in include.images %} {% assign source = item.src | default:
+    item.image %}
+    <figure>
+        {% if source and source != '' %}<button
+            class="gallery-open"
+            type="button"
+            data-lightbox="{{ source | relative_url }}"
+            data-caption="{{ item.caption | escape }}"
+        >
+            <img
+                src="{{ source | relative_url }}"
+                alt="{{ item.alt | escape }}"
+                loading="lazy"
+            /></button
+        >{% else %}
+        <div class="media-placeholder" aria-label="Image placeholder">
+            <span aria-hidden="true">⌁</span
+            ><span>{{ item.label | default: 'WIP' }}</span>
+        </div>
+        {% endif %}{% if item.caption %}
+        <figcaption>{{ item.caption }}</figcaption>
+        {% endif %}
+    </figure>
+    {% else %}
+    <figure>
+        <div class="media-placeholder">
+            <span aria-hidden="true">⌁</span><span>WIP</span>
+        </div>
+    </figure>
+    {% endfor %}
+</div>

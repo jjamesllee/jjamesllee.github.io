@@ -1,0 +1,44 @@
+<header class="topbar">
+  <div class="topbar__inner">
+    <div class="header-navigation">
+    <a class="brand" href="{{ '/home/' | relative_url }}" aria-label="{{ site.data.profile.name }}, home">
+      <img class="brand__crest" src="{{ '/assets/images/identity/university-of-toronto-crest-blue.svg' | relative_url }}" alt="University of Toronto crest" width="32" height="56">
+      <span class="brand__identity">
+        <span class="brand__name">{{ site.data.profile.name }}</span>
+        <span class="brand__university" translate="no">University of Toronto</span>
+      </span>
+    </a>
+
+    <nav aria-label="Primary navigation" data-scroll-nav tabindex="0">
+      <ul class="primary-nav">
+        {% for item in site.data.navigation %}
+          <li>
+            <a
+              href="{{ item.url | relative_url }}"
+              {% if page.url == item.url %}aria-current="page"{% elsif page.url == '/' and item.url == '/home/' %}aria-current="page"{% endif %}
+            ><span>{{ item.label }}</span></a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    </div>
+
+    <div class="header-tools" aria-label="Appearance and links">
+      <div class="header-preferences" id="header-preferences">
+      {% include appearance-controls.html %}
+      <div class="language-picker" data-language-picker>
+        <button class="header-tool language-picker__trigger" type="button" data-language-trigger aria-haspopup="menu" aria-controls="language-menu" aria-expanded="false" aria-label="Language: English" title="Language">{% include ui-icon.html name="globe" %}<span data-language-label translate="no">EN</span></button>
+        <div class="theme-picker__menu language-picker__menu" id="language-menu" role="menu" aria-label="Language" hidden>
+          <p>Language</p>
+          <button type="button" role="menuitemradio" data-language-option="en" aria-checked="true"><span class="language-picker__code" translate="no">EN</span><span translate="no">English</span><span class="theme-picker__check">{% include ui-icon.html name="check" %}</span></button>
+          <button type="button" role="menuitemradio" data-language-option="zh-Hant" aria-checked="false"><span class="language-picker__code" translate="no">中</span><span translate="no">繁體中文</span><span class="theme-picker__check">{% include ui-icon.html name="check" %}</span></button>
+        </div>
+      </div>
+      </div>
+      <span class="header-tools__divider" aria-hidden="true"></span>
+      {% for social in site.data.social_links %}
+        <a class="social-link header-tool" href="{{ social.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ social.label }} (opens in a new tab)" title="{{ social.label }}"><span class="social-link__icon social-link__icon--{{ social.label | downcase }}" aria-hidden="true"></span></a>
+      {% endfor %}
+    </div>
+  </div>
+</header>

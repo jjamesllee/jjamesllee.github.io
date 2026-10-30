@@ -1,0 +1,84 @@
+# Add any new section (work, volunteering, research, etc.) as another era.
+# `tone` controls how strongly that section uses the currently selected accent.
+eras:
+  - id: high-school
+    label: High School
+    range: 2021-2024
+    tone: 46
+    entries:
+      - id: grade-9
+        year: "2021"
+        title: Grade 9
+        summary: "WIP"
+        detail: "WIP"
+        months:
+          - id: grade-9-wip
+            date: "2021"
+            title: WIP
+            summary: "WIP"
+            detail: "WIP"
+
+      - id: grade-10
+        year: "2022"
+        title: Grade 10
+        summary: "WIP"
+        detail: "WIP"
+        months:
+          - id: grade-10-wip
+            date: "2022"
+            title: WIP
+            summary: "WIP"
+            detail: "WIP"
+
+      - id: grade-11
+        year: "2023"
+        title: Grade 11
+        summary: "WIP"
+        detail: "WIP"
+        months:
+          - id: grade-11-wip
+            date: "2023"
+            title: WIP
+            summary: "WIP"
+            detail: "WIP"
+
+      - id: grade-12
+        year: "2024"
+        title: Grade 12
+        summary: "WIP"
+        detail: "WIP"
+        months:
+          - id: grade-12-wip
+            date: "2024"
+            title: WIP
+            summary: "WIP"
+            detail: "WIP"
+
+  - id: university
+    label: University
+    range: 2025-Present
+    tone: 82
+    entries:
+      - id: university-year-1
+        year: "2025"
+        title: First Year
+        summary: "WIP"
+        detail: "WIP"
+        months:
+          - id: university-year-1-wip
+            date: "2025"
+            title: WIP
+            summary: "WIP"
+            detail: "WIP"
+
+      - id: university-year-2
+        year: "2026"
+        title: Second Year
+        summary: "WIP"
+        detail: "WIP"
+        months:
+          - id: university-year-2-wip
+            date: "2026"
+            title: WIP
+            summary: "WIP"
+            detail: "WIP"

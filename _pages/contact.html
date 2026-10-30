@@ -1,0 +1,12 @@
+---
+background: lorenz
+title: Contact
+permalink: /contact/
+description: Contact Cheng-Chi Lee.
+editorial: contact
+---
+<section class="contact-editorial" aria-labelledby="contact-heading">
+  <div class="contact-editorial__title"><h1 id="contact-heading"><span data-i18n="contact.heading.start">Let’s</span> <em data-i18n="contact.heading.action">build</em><br><span data-i18n="contact.heading.end">something together.</span></h1><span class="contact-orbit" aria-hidden="true">{% include diagonal-arrow.html %}</span></div>
+  <div class="contact-editorial__body"><p class="editorial-lead">I’m <strong>open to work</strong>, including internships, design teams, and collaborative projects. It’s up to <strong>you and me</strong>, with <strong>our minds and tools</strong>, to make a difference in the world!</p><div class="contact-channels" aria-label="Connection points">{% for social in site.data.social_links %}<a href="{{ social.url }}" target="_blank" rel="noopener noreferrer"><span class="connection-logo connection-logo--{{ social.label | downcase }}" aria-hidden="true"></span><span>{{ social.label }}</span><span aria-hidden="true">↗</span></a>{% endfor %}{% if site.data.profile.email != '' %}<a href="mailto:{{ site.data.profile.email }}"><span class="connection-logo connection-logo--email" aria-hidden="true"></span><span class="contact-email"><span>Email</span><small translate="no">{{ site.data.profile.email }}</small></span><span aria-hidden="true">↗</span></a>{% else %}<div class="contact-channel-pending"><span>Email</span><span class="wip-note">WIP</span></div>{% endif %}</div></div>
+</section>
+<section class="editorial-section resume-section" aria-labelledby="contact-resume-heading"><div class="editorial-section-heading"><div><p class="page-label">I // Resume</p><h2 id="contact-resume-heading">Resume<span class="accent-period">.</span></h2></div></div>{% include resume-card.html %}</section>

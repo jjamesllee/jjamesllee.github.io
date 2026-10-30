@@ -1,0 +1,11 @@
+- label: Personal
+  slug: personal
+  description: Independent builds, experiments, and self-directed work.
+
+- label: Academic
+  slug: academic
+  description: Coursework and design team based engineering projects.
+
+- label: Professional
+  slug: professional
+  description: Work completed in professional, research, or client settings.

@@ -1,0 +1,235 @@
+// Global: current implementation.
+
+* {
+  box-sizing: border-box;
+}
+
+*::before {
+  box-sizing: border-box;
+}
+
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  min-width: 0;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--accent);
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 0.1875rem solid var(--focus);
+  outline-offset: 0.1875rem;
+}
+
+::selection {
+  color: var(--text-primary);
+  background: var(--accent-soft);
+}
+
+main a:hover {
+  color: var(--accent-strong);
+}
+
+p {
+  max-width: 42rem;
+  color: var(--text-secondary);
+}
+
+.about-timeline {
+  position: relative;
+  padding-top: clamp(3rem, 6vw, 5rem);
+  border-top: 1px solid var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+h1 {
+  font-size: var(--title-size);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+  margin: 0;
+}
+
+p {
+  font-size: var(--body-size);
+  line-height: 1.75;
+}
+
+.template-section {
+  margin: 5rem 0;
+  padding-top: 1rem;
+}
+
+.template-section h3 {
+  font-size: 1.25rem;
+}
+
+figcaption {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+a {
+  transition:
+    color var(--motion-quick) ease,
+    background-color var(--motion-quick) ease,
+    border-color var(--motion-quick) ease,
+    box-shadow var(--motion-panel) var(--ease-ui),
+    transform var(--motion-panel) var(--ease-ui);
+}
+
+button {
+  transition:
+    color var(--motion-quick) ease,
+    background-color var(--motion-quick) ease,
+    border-color var(--motion-quick) ease,
+    box-shadow var(--motion-panel) var(--ease-ui),
+    transform var(--motion-panel) var(--ease-ui);
+}
+
+summary {
+  transition:
+    color var(--motion-quick) ease,
+    background-color var(--motion-quick) ease,
+    border-color var(--motion-quick) ease,
+    box-shadow var(--motion-panel) var(--ease-ui),
+    transform var(--motion-panel) var(--ease-ui);
+}
+
+body {
+  transition:
+    background-color 400ms ease,
+    color 400ms ease,
+    border-color 400ms ease;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 3px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+}
+
+figcaption {
+  display: block;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: calc(var(--topbar-height) + 1rem);
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+  background: var(--page-background);
+}
+
+html[lang="zh-Hant"] {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Noto Sans TC",
+    "Microsoft JhengHei",
+    sans-serif;
+}
+
+.page-masthead {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-bottom: 1.2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  font:
+    0.64rem/1.6 Consolas,
+    monospace;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.page-masthead > span:last-child {
+  text-align: right;
+}
+
+.page-masthead > span:last-child > span[aria-hidden] {
+  padding-inline: 0.35rem;
+  color: var(--accent-strong);
+}
+
+@media (max-width: 42rem) {
+  .page-masthead {
+    font-size: 0.55rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.04em;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 42rem) {
+  .page-masthead > span:last-child > span[aria-hidden] {
+    padding-inline: 0.1rem;
+  }
+}
+
+.locale-pending body * {
+  visibility: hidden !important;
+}

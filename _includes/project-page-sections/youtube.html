@@ -1,0 +1,22 @@
+<figure class="project-video">
+    <div class="project-video__embed">
+        <iframe
+            src="https://www.youtube-nocookie.com/embed/{{ include.id | url_encode }}"
+            title="{{ include.title | default: 'Project video' | escape }}"
+            loading="lazy"
+            allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+            "
+            allowfullscreen
+        ></iframe>
+    </div>
+    {% if include.caption %}
+    <figcaption>{{ include.caption }}</figcaption>
+    {% endif %}
+</figure>

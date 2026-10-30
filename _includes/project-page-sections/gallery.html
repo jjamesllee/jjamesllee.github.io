@@ -1,0 +1,8 @@
+{% assign gallery_columns = include.columns | default: 3 %}
+<section class="project-gallery-section">
+    {% if include.heading %}
+    <h2>{{ include.heading }}</h2>
+    {% endif %} {% if include.description %}
+    <p>{{ include.description }}</p>
+    {% endif %} {% include gallery.html images=include.images %}
+</section>

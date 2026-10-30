@@ -1,0 +1,158 @@
+{
+  "skills": [
+    {
+      "title": "CAD & mechanical design",
+      "items": [
+        "SOLIDWORKS",
+        "CAD modelling & design",
+        "Mechanical design",
+        "Assembly modelling",
+        "Prototyping"
+      ]
+    },
+    {
+      "title": "Programming & software",
+      "items": [
+        "Python",
+        "C++",
+        "JavaScript",
+        "TypeScript",
+        "MATLAB",
+        "Software development",
+        "Code review"
+      ]
+    },
+    {
+      "title": "Tools & software",
+      "items": [
+        "Git/GitHub",
+        "Microsoft Excel",
+        "Jupyter Notebook",
+        "Minitab",
+        "Google Sheets",
+        "Arduino"
+      ]
+    },
+    {
+      "title": "Manufacturing & fabrication",
+      "items": [
+        "Manual milling",
+        "Turning / lathe",
+        "Drilling",
+        "Reaming",
+        "Assembly",
+        "Load testing"
+      ]
+    },
+    {
+      "title": "Engineering drawing",
+      "items": [
+        "Engineering drawings",
+        "Orthographic Views",
+        "Dimensioning"
+      ]
+    },
+    {
+      "title": "Controls & testing",
+      "items": [
+        "Arduino programming",
+        "Motor Control",
+        "Testing",
+        "Troubleshooting"
+      ]
+    },
+    {
+      "title": "Teaching & coaching",
+      "items": [
+        "Swimming instruction",
+        "Lesson planning",
+        "Training delivery",
+        "Training planning",
+        "Skill assessment",
+        "Water safety",
+        "Range safety"
+      ]
+    },
+    {
+      "title": "Operations & coordination",
+      "items": [
+        "Scheduling",
+        "Workshop coordination",
+        "Event coordination",
+        "Equipment coordination"
+      ]
+    },
+    {
+      "title": "Interpersonal & leadership skills",
+      "items": [
+        "Leadership",
+        "Teamwork",
+        "Communication",
+        "Client communication",
+        "Analytical thinking",
+        "Problem solving",
+        "Organization",
+        "Event planning",
+        "Coaching",
+        "Mentoring",
+        "Constructive feedback",
+        "Public speaking",
+        "Time management",
+        "Goal setting",
+        "Patience",
+        "Responsibility",
+        "Adaptability",
+        "Resilience"
+      ]
+    },
+    {
+      "title": "Certifications & training",
+      "items": [
+        "George Brown College Basic Machining Course",
+        "National Lifeguard",
+        "Swim Instructor-Pool",
+        "Standard First Aid with CPR-C"
+      ]
+    },
+    {
+      "title": "Languages",
+      "items": [
+        "English (native)",
+        "Mandarin (native)",
+        "French (basic)"
+      ]
+    }
+  ],
+  "additional": [
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "MATLAB",
+    "Git/GitHub",
+    "Microsoft Excel",
+    "Manual milling",
+    "Turning / lathe",
+    "Drilling",
+    "Reaming",
+    "Arduino programming",
+    "Engineering drawings"
+  ],
+  "training": [
+    {
+      "name": "George Brown College Basic Machining Course",
+      "url": "https://www.mie.utoronto.ca/events/machining-courses/"
+    },
+    {
+      "name": "National Lifeguard",
+      "url": "https://www.lifesavingsociety.com/lifeguarding/national-lifeguard.aspx"
+    },
+    {
+      "name": "Swim Instructor-Pool",
+      "url": "https://www.lifesavingsociety.com/teaching/instructors/swim-instructor.aspx"
+    },
+    {
+      "name": "Standard First Aid with CPR-C",
+      "url": "https://www.lifesavingsociety.com/first-aid/intermediate-first-aid-with-cpr-c-aed.aspx"
+    }
+  ]
+}

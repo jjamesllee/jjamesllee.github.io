@@ -1,0 +1,10 @@
+{% if include.sections %}
+  <div class="timeline-detail__accordions">
+    {% for section in include.sections %}
+      <details>
+        <summary>{{ section.title }}</summary>
+        <div class="timeline-detail__section-body">{{ section.body | markdownify }}</div>
+      </details>
+    {% endfor %}
+  </div>
+{% endif %}

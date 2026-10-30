@@ -1,0 +1,30 @@
+<figure class="project-video">
+    <video
+        controls
+        playsinline
+        preload="metadata"
+        {%
+        if
+        include.poster
+        %}poster="{{ include.poster | relative_url }}"
+        {%
+        endif
+        %}
+    >
+        <source
+            src="{{ include.source | relative_url }}"
+            {%
+            if
+            include.type
+            %}
+            type="{{ include.type }}"
+            {%
+            endif
+            %}
+        />
+        Your browser does not support embedded video.
+    </video>
+    {% if include.caption %}
+    <figcaption>{{ include.caption }}</figcaption>
+    {% endif %}
+</figure>

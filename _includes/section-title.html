@@ -1,0 +1,3 @@
+<header class="section-title{% if include.compact %} collection-heading{% endif %}">
+  <div>{% if include.label and include.level != 'h1' %}<p class="page-label">Field notes // {{ include.label }}</p>{% endif %}<{{ include.level | default: 'h2' }} {% if include.id %}id="{{ include.id }}"{% endif %}>{{ include.title }}{% if include.period %}<span class="accent-period" aria-hidden="true">.</span>{% endif %}</{{ include.level | default: 'h2' }}></div>
+</header>

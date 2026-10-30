@@ -1,0 +1,17 @@
+- label: Home
+  url: /home/
+
+- label: About
+  url: /about/
+
+- label: Projects
+  url: /projects/
+
+- label: Experiences
+  url: /experience/
+
+- label: Contact
+  url: /contact/
+
+- label: Gallery
+  url: /gallery/

@@ -1,0 +1,30 @@
+<figure
+    class="project-figure{% if include.class %} {{ include.class }}{% endif %}"
+>
+    <button
+        class="gallery-open"
+        type="button"
+        data-lightbox="{{ include.image | relative_url }}"
+        data-caption="{{ include.caption | escape }}"
+        aria-label="Enlarge image: {{ include.alt | escape }}"
+    >
+        <img
+            src="{{ include.image | relative_url }}"
+            alt="{{ include.alt | escape }}"
+            {%
+            if
+            include.eager
+            %}loading="eager"
+            fetchpriority="high"
+            {%
+            else
+            %}loading="lazy"
+            {%
+            endif
+            %}
+        />
+    </button>
+    {% if include.caption %}
+    <figcaption>{{ include.caption }}</figcaption>
+    {% endif %}
+</figure>

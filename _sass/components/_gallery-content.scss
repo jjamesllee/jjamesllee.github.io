@@ -1,0 +1,41 @@
+.personal-gallery {
+  columns: 3 16rem;
+  column-gap: 1rem;
+  margin-top: 2rem;
+}
+.personal-gallery figure {
+  break-inside: avoid;
+  margin: 0 0 1rem;
+}
+.personal-gallery .gallery-open {
+  display: block;
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.personal-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: opacity 160ms ease;
+}
+.personal-gallery .gallery-open:hover img {
+  opacity: 0.88;
+}
+.personal-gallery .gallery-open:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.gallery-open:disabled {
+  cursor: default;
+}
+.gallery-unavailable {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  color: var(--text-secondary);
+  padding: 1rem;
+}

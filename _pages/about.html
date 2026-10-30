@@ -1,0 +1,78 @@
+---
+background: phyllotaxis
+title: About
+permalink: /about/
+description: About Cheng-Chi Lee.
+editorial: about
+---
+<section class="about-editorial" aria-labelledby="about-heading">
+  <div class="about-editorial__heading"><h1 id="about-heading">A little about<br><em>who I am.</em></h1></div>
+  <div class="about-essay">
+    <div class="about-essay__rail">
+    <div class="about-essay__profile">
+    <figure class="about-essay__photo"><div class="photo-placeholder" role="img" aria-label="Photo placeholder"></div><figcaption>I // Photo placeholder</figcaption></figure>
+    {% include education-note.html %}
+    </div>
+    </div>
+    <div class="about-bio" aria-labelledby="about-bio-heading">
+      <h2 id="about-bio-heading">A little about me.</h2>
+      <p>Hey 👋! I’m a second-year <strong>Mechanical Engineering</strong> student at the <strong>University of Toronto</strong>, pursuing minors in <strong>Engineering Business</strong> and <strong>Robotics &amp; Mechatronics</strong>. While mechanical engineering is my home, I’m also interested in <strong>software development</strong> and <strong>machine learning</strong>. I like understanding how things work, whether that means taking apart stuff, working through code, or following a question down a Google search rabbit hole. Welcome to my digital garden!</p>
+      <p>My background ranges from <strong>entrepreneurship</strong> to <strong>teaching</strong> and <strong>engineering design</strong>. Before university, I held leadership roles in the <strong>Royal Canadian Air Cadets</strong>, coordinating a band of over 30 cadets, captaining a marksmanship team, and coaching more than 50 cadets. Those experiences taught me effective <strong>organization</strong>, <strong>communication</strong>, and adapt how to my approach to different people. I brought these lessons into running my own <strong>private swimming instruction</strong> service, supported by my <strong>National Lifeguard</strong>, <strong>Swim Instructor</strong>, and <strong>Standard First Aid with CPR-C</strong> qualifications. Through more than <strong>100 personalized lessons</strong>, I helped students build confidence in the water while managing scheduling, payments, and parent communication.</p>
+      <p>This mix of hands-on work and working with people shapes how I approach engineering: understand the problem, build something, and keep improving it. I use <strong>SOLIDWORKS</strong> for <strong>CAD and mechanical design</strong>, <strong>JavaScript/TypeScript</strong>, <strong>HTML</strong>, and <strong>SCSS</strong> for front-end development, and <strong>Python</strong> and <strong>C++</strong> for simulation and software development. At <strong>University of Toronto Supermileage</strong>, I’m developing a rear shelf assembly to accommodate the motor, battery, and drivetrain mounts, with plans to learn <strong>ANSYS</strong> for <strong>finite element analysis</strong> as the design progresses. I also contribute to <strong>Blue Sky Solar Racing’s Strategy Team</strong>, reviewing and helping improve <strong>C++ race-planning software</strong> that supports energy management and strategy decisions.</p>
+      <p>Outside school, I’m usually playing <strong>piano</strong>, binge-reading whatever catches my attention, or finding a reason to 'touch grass'. Coming from a background in swimming and cycling, I decided that in 2026 summer I was going to combine them, adding on a run, and do my <strong>first triathlon</strong>! I also enjoy exploring the city, finding a trail, or doing whatever outdoors to kill time. There’s usually always another side quest waiting to be done.</p>
+    </div>
+    <a class="editorial-link about-experiences" href="{{ '/experience/' | relative_url }}">Experiences <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
+<section class="editorial-section" id="skills" aria-labelledby="skills-heading">
+  <div class="editorial-section-heading"><div><p class="page-label">I // What I bring</p><h2 id="skills-heading">Skills<span class="accent-period">.</span></h2></div></div>
+  <div class="skills-atlas">{% for category in site.data.capabilities.skills %}
+    <section class="skill-entry{% if category.items.size > 10 %} skill-entry--wide{% endif %}"><h3>{{ category.title }}</h3><ul>{% for skill in category.items %}<li>{{ skill }}</li>{% endfor %}</ul></section>
+  {% endfor %}</div>
+</section>
+<section class="editorial-section education-section" aria-labelledby="education-heading">
+  <div class="editorial-section-heading"><div><p class="page-label">II // Education</p><h2 id="education-heading">Education<span class="accent-period">.</span></h2></div></div>
+  <div class="education-list">
+    {% for entry in site.data.education %}
+    <article class="education-entry">
+      <div class="education-entry__logo education-entry__logo--{{ entry.logo_style }}"><img src="{{ entry.logo | relative_url }}" alt="" width="64" height="64" loading="lazy"></div>
+      <div class="education-entry__body">
+        <div class="education-entry__heading"><h3>{{ entry.program }}</h3><p class="education-entry__period">{{ entry.period }}</p></div>
+        <p class="education-entry__institution">{{ entry.institution }}{% if entry.status %} <span class="education-entry__status">{{ entry.status }}</span>{% endif %}</p>
+        <div class="education-entry__course-groups">
+          {% for group in entry.course_groups %}
+          <section class="education-course-group">
+            <h4>{{ group.heading }}</h4>
+            {% if group.note %}<p class="education-course-group__note">{{ group.note }}</p>{% endif %}
+            {% for term in group.sections %}
+            <div class="education-course-term">
+              <p class="education-course-term__status">{{ term.status }}</p>
+              <ul class="education-entry__courses">{% for course in term.courses %}<li><span class="education-course-code" translate="no">{{ course.code }}</span> <span>{{ course.title }}</span></li>{% endfor %}</ul>
+            </div>
+            {% endfor %}
+          </section>
+          {% endfor %}
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="editorial-section design-notes" aria-labelledby="design-notes-heading"><h2 id="design-notes-heading">A few clues behind the design<span class="accent-period" aria-hidden="true">.</span></h2><p>I’m a pretty big fan of math, and I’ve watched one too many math visualization videos. Hence the backgrounds: each page features a different pattern inspired by a mathematical idea. Hover over the background name in the footer to learn more.</p><p>I’ve also read one too many books on Greek and Norse mythology. That interest found its way into the garden timeline at the bottom of the page, with tree imagery and names inspired by Norse mythology, especially Yggdrasil, the world tree that connects its realms.</p>
+  <details class="tree-guide">
+    <summary>Meet the garden’s trees</summary>
+    <div class="tree-guide__body">
+      <p class="tree-guide__note">Symbolic illustrations, arranged by my career stages rather than a ranking in Norse mythology.</p>
+      <ul class="tree-guide__list">
+        {% for stage in site.data.garden %}
+        <li>
+          <div class="tree-guide__visual">{% include garden-tree.html tree=stage.tree scale=stage.scale %}</div>
+          <div><div class="tree-guide__heading"><h3>{{ stage.name }}</h3><span>{{ stage.label }}</span></div><p>{{ stage.description }}</p><a href="{{ stage.source }}" target="_blank" rel="noopener noreferrer">Read more on Wikipedia <span aria-hidden="true">↗</span></a></div>
+        </li>
+        {% endfor %}
+      </ul>
+      <p class="tree-guide__credits"><span>Tree illustrations:</span> <span>Lorc, Delapouite &amp; Cathelineau</span> <a href="https://game-icons.net/tags/wood.html" target="_blank" rel="noopener noreferrer">via Game-icons.net</a> · <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer" translate="no">CC BY 3.0</a></p>
+    </div>
+  </details>
+</section>

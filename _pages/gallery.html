@@ -1,0 +1,21 @@
+---
+background: sierpinski
+title: Gallery
+permalink: /gallery/
+description: Photos from Cheng-Chi Lee's activities and experiences.
+---
+
+{% include section-title.html level="h1" title="Gallery" id="gallery" label="Photo journal" compact=true %}
+
+<div class="personal-gallery" aria-label="Photo gallery">
+{% assign local_photo_count = 0 %}{% assign triathlon_photo_count = 0 %}
+{% for photo in site.data.gallery %}
+  {% assign photo_url = photo.url %}{% unless photo.url contains "://" %}{% assign photo_url = photo.url | relative_url %}{% endunless %}
+  {% if photo.kind == 'triathlon' %}{% assign triathlon_photo_count = triathlon_photo_count | plus: 1 %}{% else %}{% assign local_photo_count = local_photo_count | plus: 1 %}{% endif %}
+  <figure>
+    <button class="gallery-open" type="button" data-lightbox="{{ photo_url }}" aria-label="Enlarge {% if photo.kind == 'triathlon' %}triathlon photo {{ triathlon_photo_count }}{% else %}photo {{ local_photo_count }}{% endif %}">
+      <img src="{{ photo_url }}" alt="{{ photo.alt | escape }}" loading="lazy"{% if photo.width %} width="{{ photo.width }}" height="{{ photo.height }}"{% endif %}{% if photo.kind == 'triathlon' %} referrerpolicy="no-referrer"{% endif %}>
+    </button>
+  </figure>
+{% endfor %}
+</div>

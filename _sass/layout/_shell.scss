@@ -1,0 +1,256 @@
+// Shell: current implementation.
+
+@media (max-width: 42rem) {
+  .page-shell {
+    width: min(100% - 2rem, var(--content-width));
+    padding-top: calc(var(--topbar-height) + 3rem);
+    padding-left: var(--sidebar-width);
+  }
+}
+
+.page-shell p {
+  max-width: none;
+}
+
+@media (max-width: 48rem) {
+  .page-shell {
+    padding-top: 13rem;
+  }
+}
+
+.page-shell {
+  padding-left: 17rem;
+  min-width: 0;
+}
+
+@media (max-width: 70rem) {
+  .page-shell {
+    width: calc(100% - 3rem);
+    padding-left: 14rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .page-shell {
+    padding-left: 0;
+  }
+}
+
+.sidebar-collapsed .page-shell {
+  transition-delay: 450ms;
+}
+
+.process-expanded .page-shell {
+  visibility: hidden;
+}
+
+.sidebar-collapsed .page-shell {
+  padding-left: 17rem;
+}
+
+@media (max-width: 70rem) {
+  .sidebar-collapsed .page-shell {
+    padding-left: 14rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .sidebar-collapsed .page-shell {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 48rem) {
+  .page-shell {
+    width: calc(100% - 2rem);
+    padding: calc(var(--topbar-height) + 2rem) 0 3rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .sidebar-collapsed .page-shell {
+    width: calc(100% - 2rem);
+    padding: calc(var(--topbar-height) + 2rem) 0 3rem;
+  }
+}
+
+.page-shell > #skills {
+  margin: 3rem 0;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  scroll-margin-top: calc(var(--topbar-height) + 1.5rem);
+}
+
+.page-shell {
+  max-width: 100rem;
+  width: calc(100% - 4rem);
+  margin: 0 auto;
+  padding: calc(var(--topbar-height) + 3rem) 0 4rem 17rem;
+  transition: none;
+}
+
+.sidebar-collapsed .page-shell {
+  max-width: 100rem;
+  width: calc(100% - 4rem);
+  margin: 0 auto;
+  padding: calc(var(--topbar-height) + 3rem) 0 4rem 17rem;
+  transition: none;
+}
+
+.page-shell > .template-section {
+  background: var(--surface);
+  box-shadow: var(--panel-shadow);
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.page-shell > .section-title {
+  background: none;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.page-shell > p {
+  background: none;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+@media (max-width: 60rem) {
+  .page-shell {
+    width: min(70rem, 100% - 3rem);
+    margin-inline: auto;
+    padding: calc(var(--topbar-height) + 5rem) 0 4rem;
+  }
+}
+
+@media (max-width: 60rem) {
+  .sidebar-collapsed .page-shell {
+    width: min(70rem, 100% - 3rem);
+    margin-inline: auto;
+    padding: calc(var(--topbar-height) + 5rem) 0 4rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .page-shell {
+    width: calc(100% - 1.5rem);
+  }
+}
+
+@media (max-width: 30rem) {
+  .sidebar-collapsed .page-shell {
+    width: calc(100% - 1.5rem);
+  }
+}
+
+@media (max-width: 30rem) {
+  .page-shell > .template-section {
+    padding: 1.1rem;
+  }
+}
+
+html[lang="zh-Hant"] .page-shell {
+  font-size: 1.075rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 60rem) {
+  .page-shell {
+    padding-top: calc(var(--topbar-height) + 1.5rem);
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 60rem) {
+  .sidebar-collapsed .page-shell {
+    padding-top: calc(var(--topbar-height) + 1.5rem);
+    padding-bottom: 5rem;
+  }
+}
+
+.experience-page .page-shell {
+  visibility: visible;
+  margin: 0;
+  padding: 0;
+}
+
+.experience-page:not(.process-expanded) .page-shell {
+  margin: 0 auto;
+  padding: calc(var(--topbar-height) + 3rem) 0 7rem 17rem;
+}
+
+.experience-page.process-expanded .page-shell {
+  visibility: hidden;
+}
+
+@media (max-width: 60rem) {
+  .experience-page:not(.process-expanded) .page-shell {
+    padding: calc(var(--topbar-height) + 2rem) 1rem 7rem;
+  }
+}
+
+@media (min-width: 60.001rem) {
+  .sidebar-collapsed .experience-page:not(.process-expanded) .page-shell {
+    padding-left: 5.5rem;
+  }
+}
+
+.experience-page:not(.process-expanded) .page-shell {
+  padding-bottom: 6rem;
+}
+
+.page-shell > .template-section {
+  margin-block: 0 var(--section-space);
+}
+
+.editorial-page .page-shell {
+  width: min(100% - 6rem, 80rem);
+  max-width: 80rem;
+  padding: calc(var(--topbar-height) + 2.5rem) 0 0;
+  margin: 0 auto;
+}
+
+.sidebar-collapsed .editorial-page .page-shell {
+  width: min(100% - 6rem, 80rem);
+  max-width: 80rem;
+  padding: calc(var(--topbar-height) + 2.5rem) 0 0;
+  margin: 0 auto;
+}
+
+@media (max-width: 60rem) {
+  .editorial-page .page-shell {
+    width: calc(100% - 3rem);
+    padding-top: calc(var(--topbar-height) + 2rem);
+  }
+}
+
+@media (max-width: 60rem) {
+  .sidebar-collapsed .editorial-page .page-shell {
+    width: calc(100% - 3rem);
+    padding-top: calc(var(--topbar-height) + 2rem);
+  }
+}
+
+@media (max-width: 42rem) {
+  .editorial-page .page-shell {
+    width: calc(100% - 2rem);
+    padding-top: calc(var(--topbar-height) + 1.5rem);
+  }
+}
+
+@media (max-width: 42rem) {
+  .sidebar-collapsed .editorial-page .page-shell {
+    width: calc(100% - 2rem);
+    padding-top: calc(var(--topbar-height) + 1.5rem);
+  }
+}
+
+.editorial-page .page-shell > #skills {
+  margin: var(--section-space) 0;
+  padding: 0;
+}

@@ -1,0 +1,34 @@
+- label: Client Design
+  slug: client-design
+- label: CAD
+  slug: cad
+- label: Programming
+  slug: programming
+- label: Embedded Systems
+  slug: embedded-systems
+- label: Mechanical Design
+  slug: mechanical-design
+- label: Prototyping
+  slug: prototyping
+- label: Manufacturing
+  slug: manufacturing
+- label: Testing
+  slug: testing
+- label: Data Analysis
+  slug: data-analysis
+- label: Simulation
+  slug: simulation
+- label: Energy Modelling
+  slug: energy-modelling
+- label: Algorithm Design
+  slug: algorithm-design
+- label: Research
+  slug: research
+- label: Teamwork
+  slug: teamwork
+- label: Engineering Drawing
+  slug: engineering-drawing
+- label: Reverse Engineering
+  slug: reverse-engineering
+- label: Dimensional Documentation
+  slug: dimensional-documentation

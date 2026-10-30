@@ -1,0 +1,160 @@
+---
+background: chladni
+title: Experiences
+permalink: /experience/
+description: Explore my education and experiences on an interactive timeline.
+timeline_canvas: true
+---
+
+<header class="experience-heading collection-heading">
+  <h1>Experiences<span class="accent-period" aria-hidden="true">.</span></h1>
+  <p>Engineering, leadership, and the people I’ve learned alongside.</p>
+</header>
+
+<div class="experience-history" aria-label="Experience timeline">
+  {% for organization in site.data.experience %}
+  <section class="experience-organization" id="{{ organization.id }}">
+    <header class="experience-organization__identity">
+      <img class="experience-organization__logo experience-organization__logo--{{ organization.logo_style }}" src="{{ '/assets/images/experience/' | append: organization.logo | relative_url }}" alt="" width="64" height="64" loading="lazy">
+      <div>
+        <p class="experience-organization__period">{% include period.html period=organization.period %}</p>
+        <h2>{{ organization.name }}</h2>
+        <p class="experience-organization__location" translate="no">{{ organization.location }}</p>
+        {% if organization.url != '' %}<a class="experience-organization__website" href="{{ organization.url }}" target="_blank" rel="noopener noreferrer" aria-label="Organization website"><span translate="no">{{ organization.url | remove: 'https://' | remove: 'http://' | split: '/' | first }}</span><span aria-hidden="true">↗</span></a>{% endif %}
+      </div>
+    </header>
+    <div class="experience-organization__roles">
+      {% for role in organization.roles %}
+      <article class="experience-role">
+        <p class="experience-role__date">{% include period.html period=role.date %}</p>
+        <h3>{{ role.title }}</h3>
+        <ul class="experience-role__highlights">
+          {% for bullet in role.bullets %}
+          <li>{% for part in bullet %}{% if part.strong %}<strong>{{ part.text }}</strong>{% else %}{{ part.text }}{% endif %}{% endfor %}</li>
+          {% endfor %}
+        </ul>
+        <div class="experience-role__skills">
+          {% if role.technical.size > 0 %}<div><h4>Technical skills</h4><div class="project-tags">{% for skill in role.technical %}<span>{{ skill }}</span>{% endfor %}</div></div>{% endif %}
+          {% if role.interpersonal.size > 0 %}<div><h4>Interpersonal skills</h4><div class="project-tags">{% for skill in role.interpersonal %}<span>{{ skill }}</span>{% endfor %}</div></div>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  <section class="experience-additional" id="additional-skills">
+    <h2>Additional skills</h2>
+    <div class="project-tags">{% for skill in site.data.capabilities.additional %}<span>{{ skill }}</span>{% endfor %}</div>
+  </section>
+  <section class="experience-additional" id="training">
+    <h2>Certifications</h2>
+    <ul class="experience-resource-list">{% for course in site.data.capabilities.training %}<li><a href="{{ course.url }}" target="_blank" rel="noopener noreferrer">{{ course.name }}</a></li>{% endfor %}</ul>
+  </section>
+</div>
+
+{% assign timeline_entry_count = 0 %}
+{% for era in site.data.life_timeline.eras %}
+  {% assign timeline_entry_count = timeline_entry_count | plus: era.entries.size %}
+{% endfor %}
+
+<section class="about-timeline" aria-labelledby="timeline-heading">
+  {% include section-title.html level="h1" label="Iterations & milestones" title="Experiences" id="timeline-heading" %}
+  <p>Explore the moments that made me who I am today.</p>
+
+  <div class="timeline-layout is-fullscreen experience-canvas" id="full-experience-timeline" data-timeline-layout data-timeline-drawer hidden>
+    <div class="timeline-board" data-timeline-board style="--timeline-count: {{ timeline_entry_count }};" tabindex="0" aria-label="Interactive education and experience timeline. Drag or scroll in any direction to explore.">
+      <div class="timeline-section-bar">
+        <span class="timeline-section-bar__edge" data-timeline-edge-label="past" hidden>Pre high school</span>
+        {% for era in site.data.life_timeline.eras %}
+          <span class="timeline-section-bar__section" data-era="{{ era.id }}" style="--section-span: {{ era.entries.size }}; --section-tone: {{ era.tone }}%;">
+            <strong>{{ era.label }}</strong>
+            <small>{{ era.range }}</small>
+          </span>
+        {% endfor %}
+        <span class="timeline-section-bar__edge" data-timeline-edge-label="future" hidden>The Future</span>
+      </div>
+
+      <ol class="timeline-track">
+        <li class="timeline-edge timeline-edge--past">
+          <button type="button" data-timeline-edge="past" data-timeline-message="still getting the hang of it" aria-expanded="false" aria-label="Reveal pre-high-school timeline">←</button>
+          <span aria-hidden="true">Before</span>
+        </li>
+
+        {% for era in site.data.life_timeline.eras %}
+          {% for entry in era.entries %}
+            <li class="timeline-stage" data-era="{{ era.id }}" style="--section-tone: {{ era.tone }}%;">
+              <button
+                class="timeline-stage__card"
+                type="button"
+                data-timeline-stage
+                data-timeline-template="timeline-detail-{{ entry.id }}"
+                data-timeline-branch="timeline-branch-{{ entry.id }}"
+                data-timeline-date="{{ entry.year | escape }}"
+                data-timeline-title="{{ entry.title | escape }}"
+                aria-controls="timeline-branch-{{ entry.id }} timeline-detail"
+                aria-expanded="false"
+              >
+                <span>{{ entry.year }}</span>
+                <strong>{{ entry.title }}</strong>
+                <small>{{ entry.summary }}</small>
+                <em data-timeline-stage-action>Show months +</em>
+              </button>
+
+              <div class="timeline-branch" id="timeline-branch-{{ entry.id }}" data-timeline-branch-panel hidden>
+                <ol>
+                  {% for month in entry.months %}
+                    <li>
+                      <button
+                        type="button"
+                        data-timeline-month
+                        data-timeline-template="timeline-detail-{{ month.id }}"
+                        data-timeline-date="{{ month.date | escape }}"
+                        data-timeline-title="{{ month.title | escape }}"
+                        aria-controls="timeline-detail"
+                        aria-expanded="false"
+                      >
+                        <span>{{ month.date }}</span>
+                        <strong>{{ month.title }}</strong>
+                        <small>{{ month.summary }}</small>
+                      </button>
+                    </li>
+                  {% endfor %}
+                </ol>
+              </div>
+
+              <template id="timeline-detail-{{ entry.id }}">
+                {{ entry.detail | markdownify }}
+                {% include timeline-mini.html months=entry.months year=entry.year %}
+                {% include timeline-detail-sections.html sections=entry.sections %}
+              </template>
+
+              {% for month in entry.months %}
+                <template id="timeline-detail-{{ month.id }}">
+                  {{ month.detail | markdownify }}
+                  {% include timeline-detail-sections.html sections=month.sections %}
+                </template>
+              {% endfor %}
+            </li>
+          {% endfor %}
+        {% endfor %}
+
+        <li class="timeline-edge timeline-edge--future">
+          <button type="button" data-timeline-edge="future" data-timeline-message="Only time will tell!" aria-expanded="false" aria-label="Reveal future timeline">→</button>
+          <span aria-hidden="true">After</span>
+        </li>
+      </ol>
+
+      <div class="timeline-scroll-meter" aria-hidden="true"><span data-timeline-scroll-progress></span></div>
+    </div>
+
+    <aside class="timeline-detail" id="timeline-detail" data-timeline-detail hidden aria-live="polite">
+      <button class="timeline-detail__close" type="button" data-timeline-close aria-label="Close timeline details"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      <p class="timeline-detail__date" data-timeline-detail-date></p>
+      <h3 data-timeline-detail-title></h3>
+      <div class="timeline-detail__content" data-timeline-detail-content></div>
+    </aside>
+  </div>
+
+  <div class="timeline-toast" data-timeline-toast role="status" hidden></div>
+</section>
+

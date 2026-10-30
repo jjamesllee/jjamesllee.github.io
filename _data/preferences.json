@@ -1,0 +1,6 @@
+{
+  "modes": ["light", "dark", "system"],
+  "accents": ["rose", "apricot", "honey", "sage", "sky", "lavender"],
+  "languages": ["en", "zh-Hant"],
+  "defaults": { "mode": "system", "accent": "lavender", "language": "en" }
+}

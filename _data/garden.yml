@@ -1,0 +1,34 @@
+- label: High School
+  tree: hoddmimis-holt
+  scale: 0.84
+  name: Hoddmímis holt
+  description: "A sheltered wood where Líf and Lífþrasir survive the great winter."
+  source: https://en.wikipedia.org/wiki/Hoddm%C3%ADmis_holt
+- label: University
+  tree: glasir
+  scale: 0.88
+  name: Glasir
+  description: "The grove before Valhalla, described with red-gold foliage."
+  source: https://en.wikipedia.org/wiki/Glasir
+  current: true
+- label: PEY
+  tree: mimameidr
+  scale: 0.92
+  name: Mímameiðr
+  description: "A far-spreading tree that fire and iron cannot fell, with fruit and the rooster Viðófnir among its branches."
+  source: https://en.wikipedia.org/wiki/M%C3%ADmamei%C3%B0r
+  future: true
+- label: Early career
+  tree: laeradr
+  scale: 0.96
+  name: Læraðr
+  description: "The tree browsed by the goat Heiðrún and the stag Eikþyrnir at Valhalla."
+  source: https://en.wikipedia.org/wiki/L%C3%A6ra%C3%B0r
+  future: true
+- label: Senior engineer
+  tree: yggdrasil
+  scale: 1.0
+  name: Yggdrasil
+  description: "The great ash at the heart of the Norse cosmos, with three roots and branches spreading across the worlds."
+  source: https://en.wikipedia.org/wiki/Yggdrasil
+  future: true
