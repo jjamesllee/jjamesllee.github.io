@@ -534,13 +534,13 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.031372549);
 }
 
-@supports selector(details::details-content) {
+@supports #{"selector(details::details-content)"} {
   .project-group {
     interpolate-size: allow-keywords;
   }
 }
 
-@supports selector(details::details-content) {
+@supports #{"selector(details::details-content)"} {
   .project-group::details-content {
     block-size: 0;
     overflow: clip;
@@ -552,7 +552,7 @@
   }
 }
 
-@supports selector(details::details-content) {
+@supports #{"selector(details::details-content)"} {
   .project-group[open]::details-content {
     block-size: auto;
     opacity: 1;

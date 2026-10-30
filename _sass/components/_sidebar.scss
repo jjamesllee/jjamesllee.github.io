@@ -177,13 +177,13 @@
   transition: rotate var(--motion-panel) var(--ease-ui);
 }
 
-@supports selector(details::details-content) {
+@supports #{"selector(details::details-content)"} {
   .sidebar-index details {
     interpolate-size: allow-keywords;
   }
 }
 
-@supports selector(details::details-content) {
+@supports #{"selector(details::details-content)"} {
   .sidebar-index details::details-content {
     block-size: 0;
     overflow: clip;
@@ -195,7 +195,7 @@
   }
 }
 
-@supports selector(details::details-content) {
+@supports #{"selector(details::details-content)"} {
   .sidebar-index details[open]::details-content {
     block-size: auto;
     opacity: 1;
