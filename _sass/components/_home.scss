@@ -424,3 +424,23 @@ html[lang="zh-Hant"] .identity-name em {
 @media (max-width: 36rem) {
   .current-activities { grid-template-columns: minmax(0, 1fr); }
 }
+
+// A single portrait while the homepage uses the resume headshot.
+.hero-photos {
+  display: grid;
+  place-items: center;
+  padding: 0 0 2rem;
+}
+
+.hero-photo--main {
+  width: min(100%, 24rem);
+  margin: 0;
+}
+
+.hero-photo--main img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  filter: none;
+}

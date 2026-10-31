@@ -77,7 +77,10 @@ export function registerMenu({
     items[next]?.focus();
   });
   container.addEventListener("focusout", (event) => {
-    if (!container.contains(event.relatedTarget)) menu.close();
+    // Safari can blur the focused option without focusing the tapped button.
+    // Keep it visible until its click runs; outside taps are handled below.
+    if (event.relatedTarget && !container.contains(event.relatedTarget))
+      menu.close();
   });
   if (!listening) {
     listening = true;

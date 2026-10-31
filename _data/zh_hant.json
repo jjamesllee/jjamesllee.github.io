@@ -57,6 +57,7 @@
       ".": "。",
       "Get in touch": "聯絡我",
       "Photo placeholder": "照片預留位置",
+      "Portrait of Cheng-Chi Lee": "李承起的個人肖像",
       "Present": "現在",
       "Resume": "履歷"
     },
@@ -112,7 +113,7 @@
       "WIP": "製作中"
     },
     "skills_and_training": {
-      "Jupyter Notebook": "Jupyter 筆記本",
+      "Jupyter Notebook": "Jupyter Notebook",
       "Minitab": "Minitab",
       "Activity facilitation": "活動帶領",
       "Adaptability": "適應能力",
