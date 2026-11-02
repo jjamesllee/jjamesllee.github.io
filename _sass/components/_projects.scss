@@ -838,7 +838,19 @@
 }
 
 .project-groups.is-boxed .project-list {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 64rem) {
+  .project-groups.is-boxed .project-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 42rem) {
+  .project-groups.is-boxed .project-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 60rem) {
@@ -1001,11 +1013,11 @@
 }
 
 .project-groups {
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .project-group {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 // Short/collapsed project lists still finish at the viewport's bottom.

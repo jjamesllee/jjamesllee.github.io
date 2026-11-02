@@ -49,3 +49,5 @@
   box-shadow: var(--panel-shadow);
   background-color: var(--surface);
 }
+
+.lightbox--blurred img { filter: blur(24px); }

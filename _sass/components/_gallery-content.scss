@@ -39,3 +39,6 @@
   color: var(--text-secondary);
   padding: 1rem;
 }
+
+// Keep the privacy blur when hovering or opening a gallery photo.
+.personal-gallery img { filter: blur(16px); }

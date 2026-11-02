@@ -4,8 +4,8 @@
       "title": "CAD & mechanical design",
       "items": [
         "SOLIDWORKS",
-        "CAD modelling & design",
         "Mechanical design",
+        "CAD modelling & design",
         "Assembly modelling",
         "Prototyping"
       ]
@@ -18,6 +18,8 @@
         "JavaScript",
         "TypeScript",
         "MATLAB",
+        "Swift",
+        "SwiftUI",
         "Software development",
         "Code review"
       ]
@@ -26,11 +28,22 @@
       "title": "Tools & software",
       "items": [
         "Git/GitHub",
-        "Microsoft Excel",
         "Jupyter Notebook",
-        "Minitab",
+        "Arduino",
+        "Microsoft Excel",
         "Google Sheets",
-        "Arduino"
+        "Minitab"
+      ]
+    },
+    {
+      "title": "Software & AI integration",
+      "items": [
+        "Meta Wearables SDK",
+        "LinkedIn API",
+        "REST API integration",
+        "Video & audio capture",
+        "Media pipeline integration",
+        "Multimodal AI integration"
       ]
     },
     {
@@ -64,10 +77,10 @@
     {
       "title": "Teaching & coaching",
       "items": [
-        "Swimming instruction",
         "Lesson planning",
-        "Training delivery",
         "Training planning",
+        "Training delivery",
+        "Swimming instruction",
         "Skill assessment",
         "Water safety",
         "Range safety"
@@ -77,8 +90,8 @@
       "title": "Operations & coordination",
       "items": [
         "Scheduling",
-        "Workshop coordination",
         "Event coordination",
+        "Workshop coordination",
         "Equipment coordination"
       ]
     },
@@ -87,18 +100,18 @@
       "items": [
         "Leadership",
         "Teamwork",
-        "Communication",
-        "Client communication",
-        "Analytical thinking",
-        "Problem solving",
-        "Organization",
-        "Event planning",
         "Coaching",
         "Mentoring",
         "Constructive feedback",
+        "Communication",
+        "Client communication",
         "Public speaking",
+        "Organization",
+        "Event planning",
         "Time management",
         "Goal setting",
+        "Analytical thinking",
+        "Problem solving",
         "Patience",
         "Responsibility",
         "Adaptability",
@@ -154,5 +167,15 @@
       "name": "Standard First Aid with CPR-C",
       "url": "https://www.lifesavingsociety.com/first-aid/intermediate-first-aid-with-cpr-c-aed.aspx"
     }
+  ],
+  "developing": [
+    "Swift",
+    "SwiftUI",
+    "Meta Wearables SDK",
+    "LinkedIn API",
+    "REST API integration",
+    "Video & audio capture",
+    "Media pipeline integration",
+    "Multimodal AI integration"
   ]
 }

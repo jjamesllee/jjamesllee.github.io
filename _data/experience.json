@@ -563,7 +563,7 @@
               "strong": false
             },
             {
-              "text": "50+ cadets",
+              "text": "100+ cadets",
               "strong": true
             },
             {
@@ -588,6 +588,12 @@
           [
             {
               "text": "Supported competitive team members with ongoing mentorship and technical guidance.",
+              "strong": false
+            }
+          ],
+          [
+            {
+              "text": "Developed marksmanship lesson plans that are still being used two years later.",
               "strong": false
             }
           ]

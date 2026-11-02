@@ -32,3 +32,15 @@
   slug: reverse-engineering
 - label: Dimensional Documentation
   slug: dimensional-documentation
+
+- label: Wearable Computing
+  slug: wearable-computing
+
+- label: Multimodal AI
+  slug: multimodal-ai
+
+- label: API Integration
+  slug: api-integration
+
+- label: Hackathon
+  slug: hackathon

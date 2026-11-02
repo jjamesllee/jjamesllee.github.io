@@ -52,7 +52,7 @@ description: Selected projects by Cheng-Chi Lee.
     {% for category in site.data.project_categories %}
       {% assign category_projects = site.projects | where: "category", category.slug | sort: "order" %}
       {% if category_projects.size > 0 %}
-        <details class="project-group" data-project-group {% if category.slug == "academic" %}open{% endif %}>
+        <details class="project-group" data-project-group>
           <summary>
             <span>
               <strong>{{ category.label }}</strong>

@@ -152,6 +152,7 @@ export const initializeProjectFilters = () => {
       button.setAttribute("aria-pressed", "false"),
     );
     applyFilters();
+    groups.forEach((group) => { group.open = false; });
     searchInput.focus();
   });
 

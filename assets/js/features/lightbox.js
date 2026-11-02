@@ -40,6 +40,7 @@ export function initializeLightbox() {
       "alt",
     );
     dialog.querySelector("p").textContent = button?.dataset.caption || "";
+    dialog.classList.toggle("lightbox--blurred", button?.hasAttribute("data-blurred-photo") || false);
     dialog.showModal();
   });
 }

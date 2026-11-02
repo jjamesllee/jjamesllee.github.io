@@ -131,3 +131,16 @@
 .skills-atlas .skill-entry:hover li {
   background: var(--accent-soft);
 }
+
+.skills-atlas .skill-entry li:has(.skill-level) {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.45rem;
+}
+
+.skill-level {
+  font: inherit;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+}

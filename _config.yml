@@ -3,6 +3,9 @@ description: Cheng-Chi Lee's engineering portfolio.
 url: https://jjamesllee.github.io
 baseurl: ""
 exclude:
+  # Gallery is private until its photos are ready to publish.
+  - _pages/gallery.html
+  - assets/images/gallery
   # Development tooling and original source material (not runtime assets).
   - scripts
   - tests

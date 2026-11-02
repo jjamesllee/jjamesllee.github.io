@@ -21,6 +21,13 @@ export function initializeSectionIndex() {
     "solar-contribution": "My contribution",
     "solar-results": "Simulation results",
     "solar-limits": "Lessons & limitations",
+    "larp-idea": "The idea",
+    "larp-pipeline": "How it works",
+    "larp-contribution": "My contribution",
+    "larp-decisions": "Problems we solved",
+    "larp-demo": "Demo flow",
+    "larp-takeaways": "What I learned",
+    "larp-next": "Limits & next steps",
   };
   const sectionIndexSeen = new Set();
   const indexedHeadings = headings.filter((heading) => {
